@@ -1,0 +1,363 @@
+{
+  "brand": "HalalLens",
+  "tagline": "라벨 너머를 보다",
+
+  "nav": {
+    "home": "홈",
+    "scanner": "스캐너",
+    "eNumbers": "E-번호",
+    "contamination": "오염 위험",
+    "knowledge": "지식",
+    "login": "로그인",
+    "register": "회원가입",
+    "history": "기록",
+    "brands": "브랜드",
+    "contact": "문의",
+    "logout": "로그아웃",
+    "profile": "프로필"
+  },
+
+  "langSelector": {
+    "label": "언어"
+  },
+
+  "loader": {
+    "tagline": "라벨 너머를 보다"
+  },
+
+  "home": {
+    "logo": "HalalLens",
+    "heroTagline": "라벨 너머를 보다",
+    "heroTitle": "즉시 현명한 할랄 선택을 하세요",
+    "heroDesc": "성분을 분석하고 오염 위험을 감지하여 현명한 할랄 식품 선택을 하세요. HalalLens의 스마트 AI 검증기를 사용해 식품을 스캔하거나 E-번호를 바로 확인하세요.",
+    "launchScanner": "스캐너 실행",
+    "exploreENumbers": "E-번호 탐색",
+    "smartCamera": "스마트 카메라",
+    "simulatingLive": "실시간 처리 시뮬레이션 중...",
+    "active": "활성",
+    "featuresTitle": "핵심 기능 및 장점",
+    "feature1Title": "스마트 성분 스캐너",
+    "feature1Desc": "성분 목록을 붙여넣거나 라벨을 업로드하거나 실시간 카메라 스캔을 시뮬레이션하여 첨가물, E-번호 및 화학 화합물을 즉시 분석합니다.",
+    "feature2Title": "오염 감사기",
+    "feature2Desc": "제조 조건, 공유 장비, 동물성 효소 및 가공 방법을 기반으로 교차 오염 위험을 결정합니다.",
+    "feature3Title": "E-번호 디렉토리",
+    "feature3Desc": "일반적인 식품 첨가물(E-번호)의 포괄적인 내장 참조 디렉토리입니다. 할랄, 하람 또는 마슈부(의심스러운) 판정별로 필터링합니다."
+  },
+
+  "scanner": {
+    "title": "성분 스캐너",
+    "subtitle": "식품 라벨을 스캔하거나 텍스트를 붙여넣어 세부 정보를 분석합니다.",
+    "tabText": "텍스트 입력",
+    "tabUpload": "라벨 업로드",
+    "tabCamera": "라이브 렌즈 (시뮬레이션)",
+    "textPlaceholder": "제품 성분 목록을 여기에 붙여넣으세요...",
+    "exampleA": "예시 A (할랄/적합)",
+    "exampleB": "예시 B (비할랄/금지)",
+    "exampleC": "예시 C (불확실)",
+    "exampleD": "예시 D (혼합 / 알 수 없는 대체안)",
+    "analyzeBtn": "성분 분석",
+    "uploadDropzone": "식품 라벨 이미지를 클릭하거나 여기에 드래그 앤 드롭하세요",
+    "uploadSupports": "최대 10MB의 JPEG, PNG 지원",
+    "scanUploadBtn": "업로드된 이미지 스캔",
+    "scanAnother": "다른 제품 스캔",
+    "cycleMocks": "라벨 모형 순환",
+    "captureAnalyze": "캡처 및 분석",
+    "noScanTitle": "아직 스캔 데이터 없음",
+    "noScanDesc": "성분 텍스트를 붙여넣거나 식품 라벨 사진을 업로드하거나 라이브 카메라 시뮬레이터를 실행하여 여기에 감사 보고서를 렌더링하세요.",
+    "reportTitle": "할랄 적합성",
+    "reportCounts": "{{halal}} 할랄, {{nonHalal}} 비할랄, {{uncertain}} 불확실",
+    "ingredientBreakdown": "성분 분석",
+    "recommendedAlts": "추천 대체안",
+    "substituteFor": "{{name}} 대체안 (안전한 대체안)",
+    "ocrScanning": "OCR 스캔 진행 중...",
+    "extractingCodes": "타이포그래피 및 E-코드 추출 중...",
+    "crossReferencing": "데이터베이스 판정 대조 중...",
+    "unknownOrigin": "알 수 없는 / 인식되지 않은 출처",
+    "unknownRuling": "인식되지 않은 성분으로, 검증된 할랄 상태를 설정할 수 없습니다.",
+    "incorrectClassification": "이 분류가 잘못되었다고 생각하십니까?",
+    "reportBtn": "오류 신고"
+  },
+
+  "verdict": {
+    "halal": "할랄",
+    "nonHalal": "비할랄",
+    "uncertain": "불확실",
+    "compliant": "적합 (할랄)",
+    "prohibited": "금지 (비할랄)"
+  },
+
+  "directory": {
+    "title": "E-번호 디렉토리",
+    "subtitle": "유럽 식품 첨가물 코드를 검색하고 검사하여 할랄 상태, 식물 대 동물 기원 및 잠재적 건강 판정을 이해합니다.",
+    "searchPlaceholder": "E-번호 검색 (예: E120, E471, 레시틴...)",
+    "filterAll": "모든 첨가물",
+    "filterHalal": "할랄",
+    "filterNonHalal": "비할랄",
+    "filterUncertain": "불확실",
+    "noResults": "검색 기준과 일치하는 첨가물을 찾을 수 없습니다."
+  },
+
+  "contamination": {
+    "title": "교차 오염 감사기",
+    "subtitle": "생산 조건, 포장 라인, 추출 방법 및 물류 변수를 평가하여 잠재적인 비할랄 교차 오염 위험 지수를 계산합니다.",
+    "categoryLabel": "식품 및 가공 범주",
+    "checklistLabel": "생산 체크리스트 위험 요인 선택",
+    "checklistNote": "해당하는 모든 공장/가공 조건을 선택하십시오:",
+    "riskIndex": "위험 지수",
+    "actionableTitle": "실행 가능한 안전 조언",
+    "categories": {
+      "confectionery": "제과 및 과자류 (젤라틴, 코팅)",
+      "bakery": "제빵 및 곡물 (효소, 유화제)",
+      "meat": "육류 및 가금류 제품 (도축 방법)",
+      "beverages": "음료 및 주스 (추출, 정제)",
+      "dairy": "유제품 및 치즈 (레넷, 스타터 배양액)"
+    },
+    "factors": {
+      "sharedLines": {
+        "title": "공유 생산 라인",
+        "desc": "장비가 비할랄 제품(돼지고기/알코올 유도체)과 공유됩니다."
+      },
+      "ethanol": {
+        "title": "용매로서의 에탄올",
+        "desc": "가공 시 추출 또는 소독 용매로 알코올(에탄올)이 사용됩니다."
+      },
+      "enzymes": {
+        "title": "동물성 효소/레넷",
+        "desc": "검증되지 않은 동물성 지방 또는 효소 가공 보조제에서 공급됩니다."
+      },
+      "sharedFrying": {
+        "title": "공유 튀김 매체",
+        "desc": "튀김 기름이 베이컨, 햄 또는 비할랄 품목과 공유됩니다."
+      },
+      "glazes": {
+        "title": "셸락 또는 곤충 광택제",
+        "desc": "제과 코팅에 정제되지 않은 곤충 분비물이 사용됩니다."
+      }
+    },
+    "risk": {
+      "negligible": "무시할 수 있는 위험",
+      "negligibleDesc": "선택한 요인은 안전한 생산 파이프라인을 나타냅니다. 교차 오염 가능성이 매우 낮습니다.",
+      "negligibleTip1": "생산 점검이 최적 상태입니다.",
+      "negligibleTip2": "할랄 인증 기관 스탬프가 일치하는지 확인하십시오.",
+      "low": "낮은 위험",
+      "lowDesc": "접촉 오염 가능성이 낮습니다. 일반적인 운영은 적합합니다.",
+      "lowTip1": "표준 시설 위생 기록을 정기적으로 검토하십시오.",
+      "lowTip2": "인증된 지역 의회에서 검증한 품목을 선택하십시오.",
+      "moderate": "중간 위험",
+      "moderateDesc": "가공 과정에 잠재적인 교차 오염 채널(예: 공유 라인 또는 에탄올 용매)이 포함되어 있습니다. 중간 정도의 주의가 필요합니다.",
+      "moderateTip1": "전용 생산 라인이 있는 브랜드를 선호하십시오.",
+      "moderateTip2": "라인이 의례적인 세척(Sertu)을 거치는지 제조업체 FAQ를 확인하십시오.",
+      "moderateTip3": "향료 추출에 사용된 알코올이 합성/비음용인지 확인하십시오.",
+      "high": "높은 오염 위험",
+      "highDesc": "심각한 교차 오염 경로가 감지되었습니다. 하람 성분이 미량 포함되어 있을 가능성이 높습니다.",
+      "highTip1": "공식적으로 감사된 할랄 인증 스탬프가 없는 한 이 제품을 피하십시오.",
+      "highTip2": "제조업체에 직접 연락하여 제3자 실험실 감사를 요청하십시오.",
+      "highTip3": "격리된 튀김 채널을 유지하는 할랄 대체 식품을 찾으십시오."
+    }
+  },
+
+  "knowledge": {
+    "title": "자주 묻는 질문",
+    "q1": "HalalLens는 무엇입니까?",
+    "a1": "HalalLens는 소비자가 라벨의 복잡성 너머를 볼 수 있도록 돕는 프리미엄 시각적 웹 앱 대시보드입니다. 성분 목록을 처리하고, 혼란스러운 식품 첨가물 코드(E-번호)를 해독하고, 실시간 오염 위험을 계산하여 정보에 입각한 할랄 식품 선택을 돕습니다.",
+    "q2": "E-번호는 여기서 어떻게 분류됩니까?",
+    "a2": "E-번호는 유럽 연합에서 규제하는 첨가물입니다. 세 가지 주요 그룹으로 분류됩니다: <br><strong>할랄:</strong> 동물성 지방이나 알코올이 포함되지 않은 식물성, 합성 또는 화학 화합물. <br><strong>비할랄:</strong> 돼지고기, 도축되지 않은 동물 또는 코치닐(E120)과 같은 곤충에서 명시적으로 추출된 것. <br><strong>불확실:</strong> 공장의 물류에 따라 동물성 지방(비할랄) 또는 식물성 지방(할랄)에서 추출될 수 있는 유화제 또는 지방산(예: E471).",
+    "q3": "제품이 \"불확실\"해지는 이유는 무엇입니까?",
+    "a3": "이슬람 식이 지침에 따라 성분의 정확한 출처를 알 수 없는 경우 불확실(Mashbooh)로 분류됩니다. 예를 들어, 글리세린과 젤라틴은 식물, 생선, 소(올바르게 도축된 경우 할랄) 또는 돼지(비할랄)에서 유래할 수 있습니다.",
+    "q4": "카메라가 실제 사진을 스캔합니까?",
+    "a4": "예, 이 애플리케이션은 프론트엔드 광학 문자 인식(OCR) 시뮬레이터를 제공합니다. 식품 성분 라벨 이미지를 업로드하거나 카메라 시뮬레이션에서 고품질 샘플 라벨을 순환하여 확인할 수 있습니다.",
+    "sidebarTitle": "할랄 가이드 기초",
+    "sidebarDesc": "이슬람 식이 지침은 허용된(할랄) 순수하고 유익한(타이입) 식품만 섭취할 것을 명령합니다. 현대 가공 식품에 무엇이 들어가는지 이해하는 것이 할랄 라이프스타일을 유지하는 핵심입니다.",
+    "sidebarLink": "표준에 대해 더 알아보기",
+    "pwaTitle": "HalalLens 설치",
+    "pwaDesc": "식료품을 쇼핑하는 동안 오프라인에서 빠르게 식품 성분을 감사하고 포장을 스캔할 수 있도록 모바일 홈 화면에 HalalLens를 추가하세요.",
+    "pwaBtn": "웹 앱 설치"
+  },
+
+  "auth": {
+    "loginTitle": "HalalLens 로그인",
+    "registerTitle": "계정 만들기",
+    "emailPlaceholder": "이메일 주소",
+    "passwordPlaceholder": "비밀번호",
+    "confirmPasswordPlaceholder": "비밀번호 확인",
+    "namePlaceholder": "전체 이름",
+    "loginBtn": "로그인",
+    "registerBtn": "가입하기",
+    "noAccount": "계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "loginLink": "여기서 로그인",
+    "registerLink": "여기서 회원가입",
+    "error": "이메일 또는 비밀번호가 잘못되었습니다.",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+    "emailExists": "이미 등록된 이메일입니다.",
+    "success": "계정이 성공적으로 생성되었습니다!"
+  },
+
+  "history": {
+    "title": "스캔 기록",
+    "searchPlaceholder": "스캔 검색...",
+    "all": "전체",
+    "halal": "할랄",
+    "nonHalal": "비할랄",
+    "uncertain": "불확실",
+    "clearAll": "전체 삭제",
+    "product": "제품",
+    "verdict": "판정",
+    "date": "날짜",
+    "delete": "삭제",
+    "empty": "스캔 기록이 없습니다.",
+    "detail": {
+      "title": "스캔 상세",
+      "notFound": "스캔을 찾을 수 없습니다.",
+      "ocr": "OCR 추출 텍스트",
+      "halalIngredients": "할랄 성분",
+      "nonHalalIngredients": "비할랄 / 금지 성분",
+      "uncertainIngredients": "불확실 성분",
+      "manufacturingRisks": "제조 위험",
+      "noRisks": "감지된 제조 위험이 없습니다.",
+      "summary": "요약"
+    }
+  },
+
+  "contact": {
+    "title": "문의하기",
+    "namePlaceholder": "이름",
+    "emailPlaceholder": "이메일",
+    "messagePlaceholder": "메시지...",
+    "submit": "메시지 보내기",
+    "thankYou": "감사합니다! 메시지가 전송되었습니다."
+  },
+
+  "report": {
+    "title": "잘못된 분류 신고",
+    "subtitle": "HalalLens 개선을 도와주세요. 제품이 잘못 분류된 경우 알려주시기 바랍니다.",
+    "productName": "제품명",
+    "explanation": "이 분류가 잘못된 이유는 무엇인가요?",
+    "suggestion": "수정 제안 (선택 사항)",
+    "submit": "신고 제출",
+    "thankYou": "감사합니다! 검토를 위해 신고가 제출되었습니다.",
+    "backToScanner": "스캐너로 돌아가기"
+  },
+
+  "dashboard": {
+    "scanFood": "식품 스캔",
+    "scanFoodDesc": "할랄 적합성을 위해 성분을 분석합니다.",
+    "history": "기록",
+    "historyDesc": "과거 스캔 및 보고서를 확인하세요.",
+    "mosques": "모스크 찾기",
+    "mosquesDesc": "위치를 사용하여 근처 모스크를 찾아보세요.",
+    "restaurants": "할랄 레스토랑",
+    "restaurantsDesc": "근처의 할랄 식품을 말견보세요.",
+    "profile": "프로필",
+    "profileDesc": "계정과 언어 설정을 관리하세요.",
+    "contact": "문의하기",
+    "contactDesc": "지원을 위해 문의하세요."
+  },
+
+  "profile": {
+    "title": "프로필 및 설정",
+    "accountInfo": "계정 정보",
+    "name": "이름",
+    "email": "이메일",
+    "joined": "가입일",
+    "notLoggedIn": "로그인하지 않았습니다.",
+    "languageSettings": "언어 설정",
+    "selectLanguage": "선호하는 언어를 선택하세요:",
+    "scanActivity": "스캔 활동",
+    "totalProductsScanned": "총 스캔한 제품 수",
+    "scansThisWeek": "이번 주 스캔 수",
+    "halalProductsFound": "찾은 할랄 제품 수",
+    "darkMode": "다크 모드",
+    "darkModeDesc": "어두운 테마와 밝은 테마를 전환합니다.",
+    "notifications": "알림",
+    "notificationsDesc": "스캔 결과 및 제품 업데이트 알림을 받습니다.",
+    "defaultScannerMode": "기본 스캐너 모드",
+    "defaultScannerModeDesc": "스캐너 실행 시 기본 탭을 설정합니다.",
+    "uploadFile": "파일 업로드",
+    "camera": "카메라",
+    "appLanguage": "앱 언어",
+    "appLanguageDesc": "애플리케이션에 표시할 언어를 선택하세요.",
+    "halalSettings": "할랄 설정",
+    "preferredAuthority": "선호하는 인증 기관",
+    "preferredAuthorityDesc": "선호하는 할랄 인증 표준을 선택하세요.",
+    "detailedExplanations": "상세 설명",
+    "detailedExplanationsDesc": "성분에 대한 이슬람 율법 판단 및 상세 설명을 표시합니다.",
+    "security": "보안",
+    "changePassword": "비밀번호 변경",
+    "changePasswordDesc": "계정 보안 비밀번호를 업데이트합니다.",
+    "signOut": "로그아웃",
+    "signOutDesc": "현재 세션에서 로그아웃합니다.",
+    "dataPrivacy": "데이터 및 개인정보 보호",
+    "clearScanHistory": "스캔 기록 지우기",
+    "clearScanHistoryDesc": "모든 로컬 스캔 기록을 영구적으로 삭제합니다.",
+    "privacyPolicy": "개인정보 처리방침",
+    "privacyPolicyDesc": "귀하의 개인정보를 어떻게 처리하고 보호하는지 확인하십시오.",
+    "supportFeedback": "지원 및 피드백",
+    "contactSupport": "고객 지원 문의",
+    "contactSupportDesc": "도움이 필요하십니까? 직접 메시지를 보내주세요.",
+    "reportIncorrect": "잘못된 분류 신고",
+    "reportIncorrectDesc": "제품 성분 상태의 오류를 수정하도록 도와주세요.",
+    "about": "정보",
+    "appVersion": "앱 버전",
+    "appVersionDesc": "현재 소프트웨어 배포 버전을 확인합니다.",
+    "dangerZone": "위험 구역",
+    "deleteAccount": "계정 삭제",
+    "deleteAccountDesc": "프로필 및 관련된 모든 데이터를 영구적으로 삭제합니다.",
+    "btn": {
+      "editProfile": "프로필 편집",
+      "update": "업데이트",
+      "signOut": "로그아웃",
+      "clear": "지우기",
+      "view": "보기",
+      "contact": "문의",
+      "report": "신고",
+      "delete": "삭제",
+      "cancel": "취소",
+      "confirm": "확인",
+      "save": "저장",
+      "saveChanges": "변경사항 저장"
+    },
+    "modal": {
+      "areYouSure": "정말이십니까?",
+      "deleteConfirmDesc": "이 작업은 되돌릴 수 없으며, 모든 개인 데이터와 스캔 기록이 영구적으로 삭제됩니다.",
+      "changePassword": "비밀번호 변경",
+      "currentPassword": "현재 비밀번호",
+      "newPassword": "새 비밀번호",
+      "confirmNewPassword": "새 비밀번호 확인",
+      "editProfile": "프로필 편집",
+      "displayName": "표시 이름",
+      "emailReadOnly": "이메일 (읽기 전용)",
+      "preferredLanguage": "선호하는 언어"
+    },
+    "alert": {
+      "passwordsDoNotMatch": "새 비밀번호가 일치하지 않습니다.",
+      "passwordUpdated": "비밀번호가 성공적으로 업데이트되었습니다.",
+      "passwordUpdateFailed": "비밀번호 변경에 실패했습니다.",
+      "confirmClearHistory": "모든 스캔 기록을 삭제하시겠습니까?",
+      "historyCleared": "스캔 기록이 삭제되었습니다.",
+      "accountDeleted": "계정이 삭제되었습니다."
+    },
+    "versionStatus": "최신 버전"
+  },
+
+  "privacy": {
+    "title": "개인정보 처리방침",
+    "dataStored": "저장되는 데이터",
+    "dataStoredContent": "이메일, 이름, 스캔 기록 및 계정 설정을 저장합니다.",
+    "scanHistory": "스캔 기록 처리",
+    "scanHistoryContent": "스캔 기록은 로컬에 보관되며 로그인 시 계정과 동기화됩니다.",
+    "accountInfo": "계정 정보 처리",
+    "accountInfoContent": "비밀번호는 안전하게 암호화되어 저장되며 텍스트로 노출되지 않습니다.",
+    "contactInfo": "연락처 정보 처리",
+    "contactInfoContent": "이메일은 중요 업데이트 또는 지원 메시지를 전송하는 데 사용될 수 있습니다.",
+    "userRights": "사용자 권리",
+    "userRightsContent": "귀하는 설정 페이지를 통해 언제든지 데이터 삭제, 내보내기 또는 수정을 요청할 수 있습니다."
+  },
+  "archive": {
+    "title": "아카이브에서 제품 발견",
+    "desc": "이 제품은 이전에 분석되었습니다.",
+    "previousVerdict": "이전 판정",
+    "viewPrevious": "이전 결과 보기",
+    "analyzeAgain": "다시 분석"
+  }
+}

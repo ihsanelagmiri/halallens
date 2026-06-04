@@ -1,0 +1,391 @@
+{
+  "brand": "HalalLens",
+  "tagline": "Yorliq ortini ko'ring",
+
+  "nav": {
+    "home": "Bosh sahifa",
+    "scanner": "Skaner",
+    "eNumbers": "E-raqamlar",
+    "contamination": "Ifloslanish xavfi",
+    "knowledge": "Bilim",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish",
+    "history": "Tarix",
+    "brands": "Brendlar",
+    "contact": "Aloqa",
+    "logout": "Chiqish",
+    "profile": "Profil"
+  },
+
+  "langSelector": {
+    "label": "Til"
+  },
+
+  "loader": {
+    "tagline": "Yorliq ortini ko'ring"
+  },
+
+  "home": {
+    "logo": "HalalLens",
+    "heroTagline": "Yorliq ortini ko'ring",
+    "heroTitle": "Halol tanlovlarni bir zumda qiling",
+    "heroDesc": "Tarkibiy qismlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli halol oziq-ovqat tanlovlarini qiling. HalalLens aqlli AI tekshiruvchisi bilan istalgan oziq-ovqat mahsulotini skaner qiling yoki E-raqamlarni ko'rib chiqing.",
+    "launchScanner": "Skanerni ishga tushirish",
+    "exploreENumbers": "E-raqamlarni o'rganish",
+    "smartCamera": "Aqlli kamera",
+    "simulatingLive": "Jonli ishlov berishni simulyatsiya qilmoqda...",
+    "active": "Faol",
+    "featuresTitle": "Asosiy xususiyatlar va afzalliklar",
+    "feature1Title": "Aqlli tarkib skaneri",
+    "feature1Desc": "Tarkib ro'yxatlarini joylashtiring, yorliqlarni yuklang yoki qo'shimchalar, E-raqamlar va kimyoviy birikmalarni darhol tahlil qilish uchun kamera skanerlashni simulyatsiya qiling.",
+    "feature2Title": "Ifloslanish auditori",
+    "feature2Desc": "Ishlab chiqarish sharoitlari, umumiy mexanizm, hayvon fermentlari va qayta ishlash usullariga asoslanib o'zaro ifloslanish xavfini aniqlang.",
+    "feature3Title": "E-raqamlar katalogi",
+    "feature3Desc": "Umumiy oziq-ovqat qo'shimchalari (E-raqamlar) ning keng qamrovli o'rnatilgan ma'lumotnomalari. Halol, Harom yoki Mashbuh (Shubhali) hukmlar bo'yicha filtrlang."
+  },
+
+  "scanner": {
+    "title": "Tarkib skaneri",
+    "subtitle": "Tafsilotlarni tahlil qilish uchun oziq-ovqat yorliqlarni skaner qiling yoki matnlarni joylashtiring.",
+    "tabText": "Matn kiritish",
+    "tabUpload": "Yorliq yuklash",
+    "tabCamera": "Jonli linza (Sim)",
+    "textPlaceholder": "Mahsulot tarkibiy qismlar ro'yxatini bu yerga joylashtiring...",
+    "exampleA": "Misol A (Halol/Muvofiq)",
+    "exampleB": "Misol B (Harom/Taqiqlangan)",
+    "exampleC": "Misol C (Noaniq)",
+    "exampleD": "Misol D (Aralash / Noma'lum)",
+    "analyzeBtn": "Tarkibni tahlil qilish",
+    "uploadDropzone": "Oziq-ovqat yorlig'i rasmini bosing yoki bu yerga tashlang",
+    "uploadSupports": "10 MB gacha JPEG, PNG qo'llab-quvvatlanadi",
+    "scanUploadBtn": "Yuklangan rasmni skaner qilish",
+    "scanAnother": "Boshqa mahsulotni skaner qilish",
+    "cycleMocks": "Yorliq maketlarini almashish",
+    "captureAnalyze": "Suratga olish va tahlil qilish",
+    "noScanTitle": "Hali skaner ma'lumotlari yo'q",
+    "noScanDesc": "Matn tarkibiy qismlarini joylashtiring, oziq-ovqat yorlig'i rasmini yuklang yoki audit hisobotini ko'rish uchun jonli kamera simulyatorini ishga tushiring.",
+    "reportTitle": "Halol muvofiqligi",
+    "reportCounts": "{{halal}} Halol, {{nonHalal}} Harom, {{uncertain}} Noaniq",
+    "ingredientBreakdown": "Tarkib tahlili",
+    "recommendedAlts": "Tavsiya etilgan muqobillar",
+    "substituteFor": "{{name}} uchun o'rnini bosuvchi (xavfsiz muqobil)",
+    "ocrScanning": "OCR skaner jarayoni davom etmoqda...",
+    "extractingCodes": "Tipografiya va E-kodlarni ajratib olmoqda...",
+    "crossReferencing": "Ma'lumotlar bazasi qarorlarini tekshirmoqda...",
+    "unknownOrigin": "Noma'lum / Tan olinmagan manba",
+    "unknownRuling": "Tan olinmagan tarkibiy qism; halol holati tasdiqlanmadi.",
+    "incorrectClassification": "Ushbu tasnif noto'g'ri deb o'ylaysizmi?",
+    "reportBtn": "Xato haqida xabar berish"
+  },
+
+  "verdict": {
+    "halal": "HALOL",
+    "nonHalal": "HAROM",
+    "uncertain": "NOANIQ",
+    "compliant": "MUVOFIQ (HALOL)",
+    "prohibited": "TAQIQLANGAN (HAROM)"
+  },
+
+  "directory": {
+    "title": "E-raqamlar katalogi",
+    "subtitle": "Halol holatlari, o'simlik va hayvon manbalarini tushunish uchun Yevropa oziq-ovqat qo'shimchalari kodlarini qidiring va ko'rib chiqing.",
+    "searchPlaceholder": "E-raqam qidiring (masalan E120, E471, lesitin...)",
+    "filterAll": "Barcha qo'shimchalar",
+    "filterHalal": "Halol",
+    "filterNonHalal": "Harom",
+    "filterUncertain": "Noaniq",
+    "noResults": "Qidiruv mezonlariga mos qo'shimchalar topilmadi."
+  },
+
+  "contamination": {
+    "title": "O'zaro ifloslanish auditori",
+    "subtitle": "Potentsial harom o'zaro ifloslanish xavfi indeksini hisoblash uchun ishlab chiqarish sharoitlari, qadoqlash liniyalari, ajratib olish usullari va logistika o'zgaruvchilarini baholang.",
+    "categoryLabel": "Oziq-ovqat va qayta ishlash kategoriyasi",
+    "checklistLabel": "Ishlab chiqarish tekshiruv ro'yxati xavf omillarini tanlang",
+    "checklistNote": "Tegishli zavod/qayta ishlash sharoitlarini belgilang:",
+    "riskIndex": "Xavf indeksi",
+    "actionableTitle": "Amaliy xavfsiz maslahat",
+    "categories": {
+      "confectionery": "Konfet va shirinliklar (jelatin, qoplamalar)",
+      "bakery": "Non va donlar (fermentlar, emulgatorlar)",
+      "meat": "Go'sht va parranda mahsulotlari (so'yish usullari)",
+      "beverages": "Ichimliklar va sharbatlar (ajratib olish, tiniqlashtirish)",
+      "dairy": "Sut mahsulotlari va pishloq (rennet, starter kulturalar)"
+    },
+    "factors": {
+      "sharedLines": {
+        "title": "Umumiy ishlab chiqarish liniyalari",
+        "desc": "Jihozlar harom mahsulotlar (cho'chqa go'shti/alkogol hosilalari) bilan birgalikda ishlatiladi."
+      },
+      "ethanol": {
+        "title": "Erituvchi sifatida etanol",
+        "desc": "Qayta ishlashda alkogol (etanol) ajratib olish yoki sanitariya erituvchisi sifatida ishlatiladi."
+      },
+      "enzymes": {
+        "title": "Hayvon fermentlari/Rennet",
+        "desc": "Tekshirilmagan hayvon yog'lari yoki ferment qayta ishlash yordamchilaridan olingan."
+      },
+      "sharedFrying": {
+        "title": "Umumiy qovurish muhiti",
+        "desc": "Qovurish moylari bekon, jambon yoki harom mahsulotlar bilan birgalikda ishlatiladi."
+      },
+      "glazes": {
+        "title": "Shellak yoki hasharot glazuri",
+        "desc": "Konfet bo'laklarini qoplash uchun tozalanmagan hasharot sekretlari ishlatiladi."
+      }
+    },
+    "risk": {
+      "negligible": "E'tiborga olinmaydigan xavf",
+      "negligibleDesc": "Tanlangan omillar xavfsiz ishlab chiqarish quvurini ko'rsatadi. O'zaro ifloslanish ehtimoli juda past.",
+      "negligibleTip1": "Ishlab chiqarish tekshiruvlari optimal.",
+      "negligibleTip2": "Halol sertifikat organi muhrlarining mos kelishini ta'minlang.",
+      "low": "Past xavf",
+      "lowDesc": "Kontakt ifloslanish ehtimoli past. Umumiy operatsiyalar muvofiq.",
+      "lowTip1": "Standart ob'ekt sanitariya yozuvlarini muntazam ko'rib chiqing.",
+      "lowTip2": "Sertifikatlangan mahalliy kengashlar tomonidan tasdiqlangan mahsulotlarni tanlang.",
+      "moderate": "O'rtacha xavf",
+      "moderateDesc": "Qayta ishlash potentsial o'zaro ifloslanish kanallarini o'z include qiladi. O'rtacha ehtiyotkorlik talab qilinadi.",
+      "moderateTip1": "Maxsus ishlab chiqarish liniyalariga ega brendlarga ustunlik bering.",
+      "moderateTip2": "Liniyalar to'liq marosim tozalash (Sertu) dan o'tishini ko'rish uchun ishlab chiqaruvchi FAQ'larini tekshiring.",
+      "moderateTip3": "Lazzat ajratib olishda ishlatiladigan alkogollar sintetik/non-khamr ekanligini tekshiring.",
+      "high": "Yuqori ifloslanish xavfi",
+      "highDesc": "Kritik o'zaro ifloslanish yo'llari aniqlandi. Harom iz ingredientlarini o'z ichiga olish ehtimoli yuqori.",
+      "highTip1": "Rasmiy, tekshirilgan Halol sertifikati muhrlari bo'lmasa, bu mahsulotdan saqlaning.",
+      "highTip2": "Uchinchi tomon laboratoriya auditlarini so'rash uchun ishlab chiqaruvchilar bilan to'g'ridan-to'g'ri bog'laning.",
+      "highTip3": "Ajratilgan qovurish kanallarini saqlaydigan halol muqobil oziq-ovqatlarni qidiring."
+    }
+  },
+
+  "knowledge": {
+    "title": "Ko'p so'raladigan savollar",
+    "q1": "HalalLens nima?",
+    "a1": "HalalLens - iste'molchilarga yorliq murakkabliklarini ko'rishga yordam beradigan premium, vizual yo'naltirilgan veb-ilova boshqaruv paneli. U tarkibiy qismlar ro'yxatlarini qayta ishlaydi, chalkash oziq-ovqat qo'shimchalari kodlarini (E-raqamlar) hal qiladi va ongli halol oziq-ovqat tanlovlarini qilishingiz uchun ifloslanish xavfini hisoblaydi.",
+    "q2": "E-raqamlar bu yerda qanday tasniflangan?",
+    "a2": "E-raqamlar Yevropa Ittifoqi tomonidan tartibga solinadigan qo'shimchalardir. Ular uchta asosiy guruhga bo'linadi: <br><strong>Halol:</strong> Hayvon yog'i yoki alkogol bo'lmagan o'simlik asosli, sintetik yoki kimyoviy birikmalar. <br><strong>Halol bo'lmagan (Harom):</strong> Cho'chqa go'shti, so'yilmagan hayvonlar yoki qo'ng'iz (E120) kabi hasharotlardan aniq olingan. <br><strong>Noaniq:</strong> Zavod logistikasiga qarab hayvon yog'idan (Harom) yoki o'simlik yog'idan (Halol) olinishi mumkin bo'lgan E471 kabi emulgatorlar.",
+    "q3": "Mahsulot nima uchun \"Noaniq\" bo'ladi?",
+    "a3": "Aniq manbai noma'lum bo'lganda, tarkibiy qism Islom ovqatlanish ko'rsatmalariga ko'ra Noaniq (tarixan Mashbuh yoki Shubhali) sifatida tasniflanadi. Masalan, glitserin va jelatin o'simliklar, baliq, sigirlar (to'g'ri so'yilgan bo'lsa halol) yoki cho'chqalardan (harom) olinishi mumkin.",
+    "q4": "Kamera haqiqiy fotosuratlarni skaner qiladimi?",
+    "a4": "Ha, bu dasturda frontend optik belgilarni tanish (OCR) simulyatori mavjud. Oziq-ovqat tarkibiy qismlari yorlig'i rasmini yuklab olishingiz yoki kamera simulyatsiyasida yuqori sifatli namuna yorliqlarini aylantirish mumkin.",
+    "sidebarTitle": "Halol qo'llanmasi asoslari",
+    "sidebarDesc": "Islom ovqatlanish ko'rsatmalariga ko'ra faqat toza, sog'lom (Tayyib) va ruxsat etilgan (Halol) ovqat iste'mol qilish talab etiladi.",
+    "sidebarLink": "Standartlar haqida ko'proq bilib oling",
+    "pwaTitle": "HalalLens-ni o'rnatish",
+    "pwaDesc": "Do'konda xarid qilayotganda oflayn rejimda oziq-ovqat tarkibini tezda tekshirish uchun HalalLens-ni mobil bosh ekranga qo'shing.",
+    "pwaBtn": "Veb-ilovani o'rnatish"
+  },
+
+  "auth": {
+    "loginTitle": "HalalLens-ga kirish",
+    "registerTitle": "Hisob yaratish",
+    "emailPlaceholder": "Elektron pochta manzili",
+    "passwordPlaceholder": "Parol",
+    "confirmPasswordPlaceholder": "Parolni tasdiqlang",
+    "namePlaceholder": "To'liq ism",
+    "loginBtn": "Kirish",
+    "registerBtn": "Ro'yxatdan o'tish",
+    "noAccount": "Hisobingiz yo'qmi?",
+    "hasAccount": "Allaqachon hisobingiz bormi?",
+    "loginLink": "Bu yerdan kiring",
+    "registerLink": "Bu yerdan ro'yxatdan o'ting",
+    "error": "Yaroqsiz elektron pochta yoki parol.",
+    "passwordMismatch": "Parollar mos kelmaydi.",
+    "emailExists": "Elektron pochta allaqachon ro'yxatdan o'tgan.",
+    "success": "Hisob muvaffaqiyatli yaratildi!"
+  },
+
+  "history": {
+    "title": "Skaner tarixi",
+    "searchPlaceholder": "Tarixda qidirish...",
+    "all": "Barchasi",
+    "halal": "Halol",
+    "nonHalal": "Harom",
+    "uncertain": "Noaniq",
+    "clearAll": "Barchasini tozalash",
+    "product": "Mahsulot",
+    "verdict": "Qaror",
+    "date": "Sana",
+    "delete": "O'chirish",
+    "empty": "Hali skaner tarixi yo'q.",
+    "detail": {
+      "title": "Skaner tafsilotlari",
+      "notFound": "Skaner topilmadi.",
+      "ocr": "OCR bilan ajratilgan matn",
+      "halalIngredients": "Halol tarkibiy qismlar",
+      "nonHalalIngredients": "Harom / Taqiqlangan tarkibiy qismlar",
+      "uncertainIngredients": "Noaniq tarkibiy qismlar",
+      "manufacturingRisks": "Ishlab chiqarish xavflari",
+      "noRisks": "Ishlab chiqarish xavflari aniqlanmadi.",
+      "summary": "Xulosa"
+    }
+  },
+
+  "contact": {
+    "title": "Biz bilan bog'lanish",
+    "namePlaceholder": "Ismingiz",
+    "emailPlaceholder": "Elektron pochtangiz",
+    "messagePlaceholder": "Xabaringiz...",
+    "submit": "Xabar yuborish",
+    "thankYou": "Rahmat! Xabaringiz yuborildi."
+  },
+
+  "report": {
+    "title": "Noto'g'ri tasnif haqida xabar berish",
+    "subtitle": "HalalLensni yaxshilashga yordam bering. Agar mahsulot noto'g'ri tasniflangan bo'lsa, bizga xabar bering.",
+    "productName": "Mahsulot nomi",
+    "explanation": "Nima uchun bu noto'g'ri?",
+    "suggestion": "Tavsiya etilgan tuzatish (ixtiyoriy)",
+    "submit": "Hisobotni yuborish",
+    "thankYou": "Rahmat! Hisobotingiz ko'rib chiqish uchun yuborildi.",
+    "backToScanner": "Skanerga qaytish"
+  },
+
+  "dashboard": {
+    "scanFood": "Skaner",
+    "scanFoodDesc": "Tarkibni halol muvofiqligi bo'yicha tahlil qiling.",
+    "history": "Tarix",
+    "historyDesc": "O'tgan skanerlar va hisobotlarni ko'ring.",
+    "mosques": "Masjid topuvchi",
+    "mosquesDesc": "Joylashuvingizga ko'ra yaqin atrofdagi masjidlarni toping.",
+    "restaurants": "Halol restoranlar",
+    "restaurantsDesc": "Yaqin atrofdagi halol taomlarni kashf qiling.",
+    "profile": "Profil",
+    "profileDesc": "Hisobingiz va tillarni boshqaring.",
+    "contact": "Biz bilan bog'lanish",
+    "contactDesc": "Qo'llab-quvvatlash uchun aloqaga chiqing."
+  },
+
+  "profile": {
+    "title": "Profil va Sozlamalar",
+    "accountInfo": "Hisob ma'lumotlari",
+    "name": "Ism",
+    "email": "Elektron pochta",
+    "joined": "A'zo bo'ldi",
+    "notLoggedIn": "Tizimga kirmagansiz.",
+    "languageSettings": "Til sozlamalari",
+    "selectLanguage": "Afzal ko'rilgan tilni tanlang:",
+    "scanActivity": "Skanerlash faoliyati",
+    "totalProductsScanned": "Jami skanerlangan mahsulotlar",
+    "scansThisWeek": "Bu haftadagi skanerlashlar",
+    "halalProductsFound": "Topilgan halol mahsulotlar",
+    "darkMode": "Tungi rejim",
+    "darkModeDesc": "To'q va yorug' interfeys mavzularini almashtirish.",
+    "notifications": "Bildirishnomalar",
+    "notificationsDesc": "Skanerlash natijalari va mahsulot yangilanishlari bo'yicha ogohlantirishlar olish.",
+    "defaultScannerMode": "Boshlang'ich skanerlash rejimi",
+    "defaultScannerModeDesc": "Skaner ishga tushirilganda boshlang'ich bo'limni tanlang.",
+    "uploadFile": "Fayl yuklash",
+    "camera": "Kamera",
+    "appLanguage": "Ilova tili",
+    "appLanguageDesc": "Ilova uchun afzal ko'rgan tilingizni tanlang.",
+    "halalSettings": "Halol sozlamalari",
+    "preferredAuthority": "Afzal ko'rilgan organ",
+    "preferredAuthorityDesc": "Afzal ko'rgan Halol sertifikatlash standartlarini tanlang.",
+    "detailedExplanations": "Batafsil tushuntirishlar",
+    "detailedExplanationsDesc": "Batafsil islomiy hukmlar va tarkibiy qism tavsiflarini ko'rsatish.",
+    "security": "Xavfsizlik",
+    "changePassword": "Parolni o'zgartirish",
+    "changePasswordDesc": "Hisobingiz xavfsizlik parolini yangilang.",
+    "signOut": "Tizimdan chiqish",
+    "signOutDesc": "Joriy seansdan chiqish.",
+    "dataPrivacy": "Ma'lumotlar va maxfiylik",
+    "clearScanHistory": "Skanerlash tarixini tozalash",
+    "clearScanHistoryDesc": "Barcha mahalliy skanerlash yozuvlarini butunlay o'chirish.",
+    "privacyPolicy": "Maxfiylik siyosati",
+    "privacyPolicyDesc": "Shaxsiy ma'lumotlaringizni qanday qayta ishlashimiz va himoya qilishimizni ko'rib chiqing.",
+    "supportFeedback": "Qo'llab-quvvatlash va fikr-mulohazalar",
+    "contactSupport": "Qo'llab-quvvatlash xizmati bilan bog'lanish",
+    "contactSupportDesc": "Yordam kerakmi? Bizga to'g'ridan-to'g'ri xabar yuboring.",
+    "reportIncorrect": "Noto'g'ri tasnif haqida xabar berish",
+    "reportIncorrectDesc": "Mahsulot tarkibiy qismlari holatidagi xatolarni tuzatishga yordam bering.",
+    "about": "Ilova haqida",
+    "appVersion": "Ilova versiyasi",
+    "appVersionDesc": "Dasturning joriy o'rnatilgan versiyasini tekshiring.",
+    "dangerZone": "Xavfli hudud",
+    "deleteAccount": "Hisobni o'chirish",
+    "deleteAccountDesc": "Profilingizni va unga tegishli barcha ma'lumotlarni butunlay o'chirish.",
+    "btn": {
+      "editProfile": "Profilni tahrirlash",
+      "update": "Yangilash",
+      "signOut": "Chiqish",
+      "clear": "Tozalash",
+      "view": "Ko'rish",
+      "contact": "Bog'lanish",
+      "report": "Xabar berish",
+      "delete": "O'chirish",
+      "cancel": "Bekor qilish",
+      "confirm": "Tasdiqlash",
+      "save": "Saqlash",
+      "saveChanges": "O'zgarishlarni saqlash"
+    },
+    "modal": {
+      "areYouSure": "Ishonchingiz komilmi?",
+      "deleteConfirmDesc": "Ushbu amal qaytarilmaydi va barcha shaxsiy ma'lumotlaringiz hamda skanerlash tarixingiz butunlay o'chib ketadi.",
+      "changePassword": "Parolni o'zgartirish",
+      "currentPassword": "Joriy parol",
+      "newPassword": "Yangi parol",
+      "confirmNewPassword": "Yangi parolni tasdiqlang",
+      "editProfile": "Profilni tahrirlash",
+      "displayName": "Ko'rinadigan ism",
+      "emailReadOnly": "Elektron pochta (faqat o'qish uchun)",
+      "preferredLanguage": "Preferred Language"
+    },
+    "alert": {
+      "passwordsDoNotMatch": "Yangi parollar mos kelmadi",
+      "passwordUpdated": "Parol muvaffaqiyatli yangilandi",
+      "passwordUpdateFailed": "Parolni o'zgartirib bo'lmadi",
+      "confirmClearHistory": "Skanerlash tarixingizni butunlay tozalashni xohlaysizmi?",
+      "historyCleared": "Skanerlash tarixi tozalandi.",
+      "accountDeleted": "Hisob o'chirildi."
+    },
+    "versionStatus": "Eng oxirgi versiya"
+  },
+
+  "mosques": {
+    "title": "Masjid topuvchi",
+    "locating": "Yaqin atrofdagi masjidlarni topish uchun joylashuvingiz aniqlanmoqda...",
+    "error": "Joylashuvni aniqlab bo'lmadi. Ruxsat berilganiga ishonch hosil qiling.",
+    "retry": "Qayta urinish",
+    "away": "uzoqlikda",
+    "directions": "Yo'nalishni ochish"
+  },
+
+  "restaurants": {
+    "title": "Halol restoranlar",
+    "locating": "Yaqin atrofdagi restoranlarni topish uchun joylashuvingiz aniqlanmoqda...",
+    "error": "Joylashuvni aniqlab bo'lmadi. Ruxsat berilganiga ishonch hosil qiling.",
+    "retry": "Qayta urinish",
+    "away": "uzoqlikda",
+    "directions": "Yo'nalishni ochish"
+  },
+
+  "footer": {
+    "desc": "Yorliq ortini ko'ring. Tarkibiy qismlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli halol oziq-ovqat tanlovlarini qiling.",
+    "navTitle": "Navigatsiya",
+    "resourcesTitle": "Resurslar",
+    "islamicGuide": "Islom oziq-ovqat kodeksi qo'llanmasi",
+    "globalStandards": "Global Halol standartlari",
+    "rights": "© 2026 HalalLens. Barcha huquqlar himoyalangan.",
+    "pwa": "Ish stoli va mobil qurilmalar uchun progressiv veb-ilova sifatida yaratilgan."
+  },
+
+  "privacy": {
+    "title": "Maxfiylik siyosati",
+    "dataStored": "Qanday ma'lumotlar saqlanadi",
+    "dataStoredContent": "Biz sizning elektron pochtangiz, ismingiz, skanerlash tarixingiz va hisob sozlamalaringizni saqlaymiz.",
+    "scanHistory": "Skanerlash tarixini boshqarish",
+    "scanHistoryContent": "Your scan history is kept locally and synced to your account if you are logged in.",
+    "accountInfo": "Hisob ma'lumotlarini boshqarish",
+    "accountInfoContent": "Passwords are stored securely and never exposed in plain text.",
+    "contactInfo": "Aloqa ma'lumotlarini boshqarish",
+    "contactInfoContent": "We may use your email to send important updates or support messages.",
+    "userRights": "Foydalanuvchi huquqlari",
+    "userRightsContent": "You can request data deletion, export, or modification anytime via the Settings page."
+  },
+  "archive": {
+    "title": "Arxivda mahsulot topildi",
+    "desc": "Bu mahsulot oldin tahlil qilingan.",
+    "previousVerdict": "Oldingi Qaror",
+    "viewPrevious": "Oldingi Natijani Ko'rish",
+    "analyzeAgain": "Qayta Tahlil Qilish"
+  }
+}
