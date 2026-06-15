@@ -1,7 +1,6 @@
 {
-  "brand": "HalalLens",
-  "tagline": "See Beyond the Label",
-
+  "brand": "HalalHan",
+  "tagline": "Trusted halal guidance.",
   "nav": {
     "home": "Home",
     "scanner": "Scanner",
@@ -16,20 +15,17 @@
     "logout": "Logout",
     "profile": "Profile"
   },
-
   "langSelector": {
     "label": "Language"
   },
-
   "loader": {
-    "tagline": "See Beyond the Label"
+    "tagline": "Trusted halal guidance."
   },
-
   "home": {
-    "logo": "HalalLens",
-    "heroTagline": "See Beyond the Label",
+    "logo": "HalalHan",
+    "heroTagline": "Trusted halal guidance.",
     "heroTitle": "Make Informed Halal Choices Instantly",
-    "heroDesc": "Analyze ingredients, detect contamination risks, and make informed halal food choices. Scan any food item or review E-Numbers directly with HalalLens' smart AI validator.",
+    "heroDesc": "Analyze ingredients, detect contamination risks, and make informed halal food choices. Scan any food item or review E-Numbers directly with HalalHan' smart AI validator.",
     "launchScanner": "Launch Scanner",
     "exploreENumbers": "Explore E-Numbers",
     "smartCamera": "Smart Camera",
@@ -41,9 +37,10 @@
     "feature2Title": "Contamination Auditor",
     "feature2Desc": "Determine cross-contamination risks based on manufacturing conditions, shared machinery, animal enzymes, and processing methods.",
     "feature3Title": "E-Numbers Directory",
-    "feature3Desc": "A comprehensive built-in reference directory of common food additives (E-Numbers). Filter by Halal, Haram, or Mashbooh (Doubtful) rulings."
+    "feature3Desc": "A comprehensive built-in reference directory of common food additives (E-Numbers). Filter by Halal, Haram, or Mashbooh (Doubtful) rulings.",
+    "quranVerse": "O mankind, eat from whatever is on earth [that is] lawful and good and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy.",
+    "quranCitation": "Quran 2:168"
   },
-
   "scanner": {
     "title": "Ingredient Scanner",
     "subtitle": "Scan food labels or paste texts to analyze details.",
@@ -77,7 +74,6 @@
     "incorrectClassification": "Think this classification is incorrect?",
     "reportBtn": "Report Error"
   },
-
   "verdict": {
     "halal": "HALAL",
     "nonHalal": "NON-HALAL",
@@ -85,7 +81,6 @@
     "compliant": "COMPLIANT (HALAL)",
     "prohibited": "PROHIBITED (NON-HALAL)"
   },
-
   "directory": {
     "title": "E-Numbers Directory",
     "subtitle": "Search and inspect European food additive codes to understand their halal statuses, plant vs. animal origins, and potential health rulings.",
@@ -96,7 +91,6 @@
     "filterUncertain": "Uncertain",
     "noResults": "No additives found matching search criteria."
   },
-
   "contamination": {
     "title": "Cross-Contamination Auditor",
     "subtitle": "Evaluate production conditions, packaging lines, extraction methods, and logistics variables to calculate a potential non-halal cross-contamination risk index.",
@@ -155,11 +149,10 @@
       "highTip3": "Look for halal alternative foods that maintain isolated fryer channels."
     }
   },
-
   "knowledge": {
     "title": "Frequently Asked Questions",
-    "q1": "What is HalalLens?",
-    "a1": "HalalLens is a premium, visual-oriented web app dashboard designed to help consumers see beyond label complexities. It processes ingredient lists, decodes confusing food additive codes (E-numbers), and calculates contamination risks on the fly so you can make informed halal food choices.",
+    "q1": "What is HalalHan?",
+    "a1": "HalalHan is a premium, visual-oriented web app dashboard designed to help consumers see beyond label complexities. It processes ingredient lists, decodes confusing food additive codes (E-numbers), and calculates contamination risks on the fly so you can make informed halal food choices.",
     "q2": "How are E-Numbers classified here?",
     "a2": "E-Numbers are additives regulated by the European Union. They are classified into three main groups: <br><strong>Halal:</strong> Plant-based, synthetic, or chemical compounds containing zero animal fat or alcohol. <br><strong>Non-Halal:</strong> Sourced explicitly from pork, non-slaughtered animals, or insects like cochineal (E120). <br><strong>Uncertain:</strong> Emulsifiers or fatty acids (like E471) that can be sourced from either animal fat (Non-Halal) or plant fat (Halal) depending on the factory's logistics.",
     "q3": "What makes a product \"Uncertain\"?",
@@ -169,13 +162,12 @@
     "sidebarTitle": "Halal Guide Foundations",
     "sidebarDesc": "Islamic dietary guidelines mandate consuming only pure, wholesome food (Tayyib) which is permissible (Halal). Understanding what goes into modern processed food is key to maintaining a halal lifestyle.",
     "sidebarLink": "Learn more about standards",
-    "pwaTitle": "Install HalalLens",
-    "pwaDesc": "Add HalalLens to your mobile home screen to quickly audit food ingredients and scan packaging while grocery shopping offline.",
+    "pwaTitle": "Install HalalHan",
+    "pwaDesc": "Add HalalHan to your mobile home screen to quickly audit food ingredients and scan packaging while grocery shopping offline.",
     "pwaBtn": "Install Web App"
   },
-
   "auth": {
-    "loginTitle": "Login to HalalLens",
+    "loginTitle": "Login to HalalHan",
     "registerTitle": "Create Account",
     "emailPlaceholder": "Email address",
     "passwordPlaceholder": "Password",
@@ -192,7 +184,6 @@
     "emailExists": "Email already registered.",
     "success": "Account created successfully!"
   },
-
   "history": {
     "title": "Scan History",
     "searchPlaceholder": "Search scans...",
@@ -218,7 +209,6 @@
       "summary": "Summary"
     }
   },
-
   "contact": {
     "title": "Contact Us",
     "namePlaceholder": "Your name",
@@ -227,10 +217,9 @@
     "submit": "Send Message",
     "thankYou": "Thank you! Your message has been sent."
   },
-
   "report": {
     "title": "Report Incorrect Classification",
-    "subtitle": "Help us improve HalalLens. Let us know if a product was classified incorrectly.",
+    "subtitle": "Help us improve HalalHan. Let us know if a product was classified incorrectly.",
     "productName": "Product Name",
     "explanation": "Why is this incorrect?",
     "suggestion": "Suggested correction (optional)",
@@ -238,7 +227,6 @@
     "thankYou": "Thank you! Your report has been submitted for review.",
     "backToScanner": "Back to Scanner"
   },
-
   "dashboard": {
     "scanFood": "Scan Food",
     "scanFoodDesc": "Analyze ingredients for halal compliance.",
@@ -253,7 +241,6 @@
     "contact": "Contact Us",
     "contactDesc": "Get in touch for support."
   },
-
   "profile": {
     "title": "Profile & Settings",
     "accountInfo": "Account Information",
@@ -339,7 +326,6 @@
     },
     "versionStatus": "Up to date"
   },
-
   "mosques": {
     "title": "Mosque Finder",
     "locating": "Detecting your location to find nearby mosques...",
@@ -348,7 +334,6 @@
     "away": "away",
     "directions": "Open Directions"
   },
-
   "restaurants": {
     "title": "Halal Restaurants",
     "locating": "Detecting your location to find nearby restaurants...",
@@ -357,17 +342,15 @@
     "away": "away",
     "directions": "Open Directions"
   },
-
   "footer": {
-    "desc": "See Beyond the Label. Analyze ingredients, detect contamination risks, and make informed halal food choices.",
+    "desc": "Trusted halal guidance. Analyze ingredients, detect contamination risks, and make informed halal food choices.",
     "navTitle": "Navigation",
     "resourcesTitle": "Resources",
     "islamicGuide": "Islamic Food Code Guide",
     "globalStandards": "Global Halal Standards",
-    "rights": "© 2026 HalalLens. All rights reserved.",
+    "rights": "© 2026 HalalHan. All rights reserved.",
     "pwa": "Built as a Progressive Web App for desktop and mobile devices."
   },
-
   "privacy": {
     "title": "Privacy Policy",
     "dataStored": "What data is stored",
@@ -381,7 +364,6 @@
     "userRights": "User rights",
     "userRightsContent": "You can request data deletion, export, or modification anytime via the Settings page."
   },
-
   "archive": {
     "title": "Product Found in Archive",
     "desc": "This product was previously analyzed.",
@@ -389,5 +371,4 @@
     "viewPrevious": "View Previous Result",
     "analyzeAgain": "Analyze Again"
   }
-
 }

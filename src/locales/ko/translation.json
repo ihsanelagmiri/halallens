@@ -1,7 +1,6 @@
 {
-  "brand": "HalalLens",
-  "tagline": "라벨 너머를 보다",
-
+  "brand": "HalalHan",
+  "tagline": "신뢰할 수 있는 할랄 가이드.",
   "nav": {
     "home": "홈",
     "scanner": "스캐너",
@@ -16,20 +15,17 @@
     "logout": "로그아웃",
     "profile": "프로필"
   },
-
   "langSelector": {
     "label": "언어"
   },
-
   "loader": {
-    "tagline": "라벨 너머를 보다"
+    "tagline": "신뢰할 수 있는 할랄 가이드."
   },
-
   "home": {
-    "logo": "HalalLens",
-    "heroTagline": "라벨 너머를 보다",
+    "logo": "HalalHan",
+    "heroTagline": "신뢰할 수 있는 할랄 가이드.",
     "heroTitle": "즉시 현명한 할랄 선택을 하세요",
-    "heroDesc": "성분을 분석하고 오염 위험을 감지하여 현명한 할랄 식품 선택을 하세요. HalalLens의 스마트 AI 검증기를 사용해 식품을 스캔하거나 E-번호를 바로 확인하세요.",
+    "heroDesc": "성분을 분석하고 오염 위험을 감지하여 현명한 할랄 식품 선택을 하세요. HalalHan의 스마트 AI 검증기를 사용해 식품을 스캔하거나 E-번호를 바로 확인하세요.",
     "launchScanner": "스캐너 실행",
     "exploreENumbers": "E-번호 탐색",
     "smartCamera": "스마트 카메라",
@@ -41,9 +37,10 @@
     "feature2Title": "오염 감사기",
     "feature2Desc": "제조 조건, 공유 장비, 동물성 효소 및 가공 방법을 기반으로 교차 오염 위험을 결정합니다.",
     "feature3Title": "E-번호 디렉토리",
-    "feature3Desc": "일반적인 식품 첨가물(E-번호)의 포괄적인 내장 참조 디렉토리입니다. 할랄, 하람 또는 마슈부(의심스러운) 판정별로 필터링합니다."
+    "feature3Desc": "일반적인 식품 첨가물(E-번호)의 포괄적인 내장 참조 디렉토리입니다. 할랄, 하람 또는 마슈부(의심스러운) 판정별로 필터링합니다.",
+    "quranVerse": "사람들이여! 대지에 있는 것들 중에서 허락된 좋은 것을 먹되 사탄의 발자취를 따르지 말라. 실로 그는 그대들의 분명한 적이라.",
+    "quranCitation": "꾸란 2:168"
   },
-
   "scanner": {
     "title": "성분 스캐너",
     "subtitle": "식품 라벨을 스캔하거나 텍스트를 붙여넣어 세부 정보를 분석합니다.",
@@ -77,7 +74,6 @@
     "incorrectClassification": "이 분류가 잘못되었다고 생각하십니까?",
     "reportBtn": "오류 신고"
   },
-
   "verdict": {
     "halal": "할랄",
     "nonHalal": "비할랄",
@@ -85,7 +81,6 @@
     "compliant": "적합 (할랄)",
     "prohibited": "금지 (비할랄)"
   },
-
   "directory": {
     "title": "E-번호 디렉토리",
     "subtitle": "유럽 식품 첨가물 코드를 검색하고 검사하여 할랄 상태, 식물 대 동물 기원 및 잠재적 건강 판정을 이해합니다.",
@@ -96,7 +91,6 @@
     "filterUncertain": "불확실",
     "noResults": "검색 기준과 일치하는 첨가물을 찾을 수 없습니다."
   },
-
   "contamination": {
     "title": "교차 오염 감사기",
     "subtitle": "생산 조건, 포장 라인, 추출 방법 및 물류 변수를 평가하여 잠재적인 비할랄 교차 오염 위험 지수를 계산합니다.",
@@ -155,11 +149,10 @@
       "highTip3": "격리된 튀김 채널을 유지하는 할랄 대체 식품을 찾으십시오."
     }
   },
-
   "knowledge": {
     "title": "자주 묻는 질문",
-    "q1": "HalalLens는 무엇입니까?",
-    "a1": "HalalLens는 소비자가 라벨의 복잡성 너머를 볼 수 있도록 돕는 프리미엄 시각적 웹 앱 대시보드입니다. 성분 목록을 처리하고, 혼란스러운 식품 첨가물 코드(E-번호)를 해독하고, 실시간 오염 위험을 계산하여 정보에 입각한 할랄 식품 선택을 돕습니다.",
+    "q1": "HalalHan는 무엇입니까?",
+    "a1": "HalalHan는 소비자가 라벨의 복잡성 너머를 볼 수 있도록 돕는 프리미엄 시각적 웹 앱 대시보드입니다. 성분 목록을 처리하고, 혼란스러운 식품 첨가물 코드(E-번호)를 해독하고, 실시간 오염 위험을 계산하여 정보에 입각한 할랄 식품 선택을 돕습니다.",
     "q2": "E-번호는 여기서 어떻게 분류됩니까?",
     "a2": "E-번호는 유럽 연합에서 규제하는 첨가물입니다. 세 가지 주요 그룹으로 분류됩니다: <br><strong>할랄:</strong> 동물성 지방이나 알코올이 포함되지 않은 식물성, 합성 또는 화학 화합물. <br><strong>비할랄:</strong> 돼지고기, 도축되지 않은 동물 또는 코치닐(E120)과 같은 곤충에서 명시적으로 추출된 것. <br><strong>불확실:</strong> 공장의 물류에 따라 동물성 지방(비할랄) 또는 식물성 지방(할랄)에서 추출될 수 있는 유화제 또는 지방산(예: E471).",
     "q3": "제품이 \"불확실\"해지는 이유는 무엇입니까?",
@@ -169,13 +162,12 @@
     "sidebarTitle": "할랄 가이드 기초",
     "sidebarDesc": "이슬람 식이 지침은 허용된(할랄) 순수하고 유익한(타이입) 식품만 섭취할 것을 명령합니다. 현대 가공 식품에 무엇이 들어가는지 이해하는 것이 할랄 라이프스타일을 유지하는 핵심입니다.",
     "sidebarLink": "표준에 대해 더 알아보기",
-    "pwaTitle": "HalalLens 설치",
-    "pwaDesc": "식료품을 쇼핑하는 동안 오프라인에서 빠르게 식품 성분을 감사하고 포장을 스캔할 수 있도록 모바일 홈 화면에 HalalLens를 추가하세요.",
+    "pwaTitle": "HalalHan 설치",
+    "pwaDesc": "식료품을 쇼핑하는 동안 오프라인에서 빠르게 식품 성분을 감사하고 포장을 스캔할 수 있도록 모바일 홈 화면에 HalalHan를 추가하세요.",
     "pwaBtn": "웹 앱 설치"
   },
-
   "auth": {
-    "loginTitle": "HalalLens 로그인",
+    "loginTitle": "HalalHan 로그인",
     "registerTitle": "계정 만들기",
     "emailPlaceholder": "이메일 주소",
     "passwordPlaceholder": "비밀번호",
@@ -192,7 +184,6 @@
     "emailExists": "이미 등록된 이메일입니다.",
     "success": "계정이 성공적으로 생성되었습니다!"
   },
-
   "history": {
     "title": "스캔 기록",
     "searchPlaceholder": "스캔 검색...",
@@ -218,7 +209,6 @@
       "summary": "요약"
     }
   },
-
   "contact": {
     "title": "문의하기",
     "namePlaceholder": "이름",
@@ -227,10 +217,9 @@
     "submit": "메시지 보내기",
     "thankYou": "감사합니다! 메시지가 전송되었습니다."
   },
-
   "report": {
     "title": "잘못된 분류 신고",
-    "subtitle": "HalalLens 개선을 도와주세요. 제품이 잘못 분류된 경우 알려주시기 바랍니다.",
+    "subtitle": "HalalHan 개선을 도와주세요. 제품이 잘못 분류된 경우 알려주시기 바랍니다.",
     "productName": "제품명",
     "explanation": "이 분류가 잘못된 이유는 무엇인가요?",
     "suggestion": "수정 제안 (선택 사항)",
@@ -238,7 +227,6 @@
     "thankYou": "감사합니다! 검토를 위해 신고가 제출되었습니다.",
     "backToScanner": "스캐너로 돌아가기"
   },
-
   "dashboard": {
     "scanFood": "식품 스캔",
     "scanFoodDesc": "할랄 적합성을 위해 성분을 분석합니다.",
@@ -253,7 +241,6 @@
     "contact": "문의하기",
     "contactDesc": "지원을 위해 문의하세요."
   },
-
   "profile": {
     "title": "프로필 및 설정",
     "accountInfo": "계정 정보",
@@ -339,7 +326,6 @@
     },
     "versionStatus": "최신 버전"
   },
-
   "privacy": {
     "title": "개인정보 처리방침",
     "dataStored": "저장되는 데이터",

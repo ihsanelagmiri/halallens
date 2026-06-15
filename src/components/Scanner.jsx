@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { translateDbText } from '../utils/dbTranslation.js';
 import { AuthContext } from '../context/AuthContext.jsx';
 import { getHistory, addHistory } from '../utils/storage.js';
+import { createWorker } from 'tesseract.js';
 import ArchiveOverlay from './ArchiveOverlay.jsx';
 
 // Multilingual ingredient database (aliases cover EN + KO)
@@ -100,12 +101,46 @@ export default function Scanner() {
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [loadingMsg, setLoadingMsg] = useState('');
+  const [ocrProgress, setOcrProgress] = useState(0); // OCR progress percentage
   const [mockIndex, setMockIndex] = useState(0);
   const [uploadedFile, setUploadedFile] = useState(null);
   const fileInputRef = useRef(null);
   const resultsPanelRef = useRef(null);
   const uploadedFileRef = useRef(null);
   const detailedExplanations = localStorage.getItem('detailedExplanations') !== 'false';
+  // Worker reference for Tesseract OCR
+  const workerRef = useRef(null);
+  // Initialize Tesseract worker on mount (v5 API)
+  useEffect(() => {
+    let cancelled = false;
+    const initWorker = async () => {
+      try {
+        // tesseract.js v5: createWorker(langs, oem, options)
+        // Worker comes pre-loaded with language data — no separate load/initialize calls needed
+        const worker = await createWorker('eng+kor', 1, {
+          logger: m => {
+            if (m.status === 'recognizing text') {
+              setOcrProgress(Math.round(m.progress * 100));
+            }
+          }
+        });
+        if (!cancelled) {
+          workerRef.current = worker;
+        } else {
+          worker.terminate();
+        }
+      } catch (err) {
+        console.error('Failed to initialize Tesseract worker:', err);
+      }
+    };
+    initWorker();
+    return () => {
+      cancelled = true;
+      if (workerRef.current) {
+        workerRef.current.terminate();
+      }
+    };
+  }, []);
 
   const { currentUser } = useContext(AuthContext);
   const [confirmationMsg, setConfirmationMsg] = useState('');
@@ -120,7 +155,8 @@ export default function Scanner() {
     { label: t('scanner.exampleC'), text: '소맥분, 정제수, 식물성유지, 젤라틴, 소고기 추출물, L-글루타민산나트륨, 유화제 E471' },
     { label: t('scanner.exampleD'), text: 'Wheat flour, water, pig gelatin, lard, E120, whey, unknown_additive' },
   ];
-
+  // Ref for hidden camera input
+  const cameraInputRef = useRef(null);
   const checkArchive = (ingredientsStr) => {
     if (!currentUser) return false;
     console.log(`[Scanner][Archive] Checking for duplicate scan. User: ${currentUser.email}`);
@@ -229,14 +265,59 @@ export default function Scanner() {
     processAnalysis(rawText);
   };
 
+  const performOcr = async (dataUrl) => {
+    if (!workerRef.current) {
+      console.error('Tesseract worker not initialized');
+      return;
+    }
+    setLoading(true);
+    setLoadingMsg(t('scanner.ocrScanning') || 'Processing OCR...');
+    setOcrProgress(0);
+    try {
+      const { data: { text } } = await workerRef.current.recognize(dataUrl);
+      const extracted = text.trim();
+      if (!extracted) {
+        alert(t('scanner.emptyOcrResult') || 'OCR returned no text.');
+        setLoading(false);
+      } else {
+        processAnalysis(extracted, dataUrl);
+      }
+    } catch (err) {
+      console.error('OCR error:', err);
+      alert(t('scanner.ocrError') || 'Failed to process image.');
+      setLoading(false);
+    } finally {
+      setOcrProgress(0);
+    }
+  };
+
   const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      if (file.size > 5 * 1024 * 1024) {
+        alert(t('ocrErrorInvalidImage') || 'Image too large (max 5 MB).');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const dataUrl = ev.target.result;
+        setUploadedFile(dataUrl);
+        uploadedFileRef.current = dataUrl;
+        performOcr(dataUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleCameraFileChange = (e) => {
     const file = e.target.files[0];
     if (file && file.type.startsWith('image/')) {
       const reader = new FileReader();
       reader.onload = (ev) => {
-        setUploadedFile(ev.target.result);
-        // Keep ref in sync so setTimeout callbacks always read the latest value
-        uploadedFileRef.current = ev.target.result;
+        const dataUrl = ev.target.result;
+        setUploadedFile(dataUrl);
+        uploadedFileRef.current = dataUrl;
+        performOcr(dataUrl);
       };
       reader.readAsDataURL(file);
     }
@@ -250,14 +331,20 @@ export default function Scanner() {
       reader.onload = (ev) => {
         setUploadedFile(ev.target.result);
         uploadedFileRef.current = ev.target.result;
+        performOcr(ev.target.result);
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const handleCameraCapture = () => {
+  const handleMockCapture = () => {
     const currentMock = MOCK_LABELS[mockIndex];
     processAnalysis(currentMock.ingredients);
+  };
+  const handleRealCameraCapture = () => {
+    if (cameraInputRef.current) {
+      cameraInputRef.current.click();
+    }
   };
 
   const verdictLabel = (result) => {
@@ -266,22 +353,6 @@ export default function Scanner() {
     return { text: t('verdict.compliant'), cls: 'halal' };
   };
 
-  /**
-   * handleReset — clears all scan-related state so the user can scan
-   * a new product without leaving the Scanner page.
-   *
-   * What it resets:
-   *  - results          : hides the results panel
-   *  - text             : clears the manual-entry textarea
-   *  - uploadedFile     : removes the image preview so the dropzone reappears
-   *  - loading / msg    : clears any in-progress UI
-   *  - confirmationMsg  : removes the "Scan saved" toast
-   *  - archiveMatch     : dismisses any archive-match overlay
-   *  - pendingText/Image: discards queued analysis data
-   *  - fileInputRef     : resets the <input type="file"> so the same file
-   *                       can be chosen again (browsers block onChange if
-   *                       the value hasn't changed)
-   */
   const handleReset = () => {
     setResults(null);
     setText('');
@@ -294,7 +365,6 @@ export default function Scanner() {
     setPendingText(null);
     setPendingImage(null);
     uploadedFileRef.current = null;
-    // Reset the native file input so the same file triggers onChange again
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -360,10 +430,7 @@ export default function Scanner() {
               ) : (
                 <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'16px', marginTop:'16px' }}>
                   <img src={uploadedFile} alt="Upload Preview" style={{ maxHeight:'200px', borderRadius:'8px', border:'1px solid var(--glass-border)' }} />
-                  <button className="btn btn-primary" id="btn-analyze-upload" style={{ width:'100%' }} onClick={() => {
-                    const mocks = ['Wheat flour, whey, E471, water, lactic acid, carmine cochineal red, gelatin, sugar','Palm oil, soy lecithin E322, cocoa, sugar, potassium sorbate E202, pectin','Sodium caseinate, yeast, flour, water, E904 shellac glaze, l-cysteine'];
-                    runAnalysis(mocks[Math.floor(Math.random()*mocks.length)]);
-                  }}>
+                  <button className="btn btn-primary" id="btn-analyze-upload" style={{ width:'100%' }} onClick={() => performOcr(uploadedFile)}>
                     {t('scanner.scanUploadBtn')}
                   </button>
                 </div>
@@ -376,24 +443,17 @@ export default function Scanner() {
               <div className="camera-simulation">
                 <div style={{ position:'relative', borderRadius:'12px', overflow:'hidden', background:'#1a1210' }}>
                   <div style={{ height:'220px', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:'12px', padding:'20px', background:'linear-gradient(135deg, #1a1210 0%, #2c241b 100%)' }}>
-                    <div style={{ fontSize:'0.8rem', color:'var(--text-muted)', textAlign:'center', fontWeight:'600', letterSpacing:'0.05em' }}>MOCK LABEL • {MOCK_LABELS[mockIndex].name}</div>
-                    <div style={{ fontSize:'0.75rem', color:'var(--text-secondary)', textAlign:'center', lineHeight:'1.7', maxWidth:'280px' }}>
-                      {MOCK_LABELS[mockIndex].ingredients}
+                    <div style={{ fontSize:'0.8rem', color:'var(--text-muted)', textAlign:'center', fontWeight:'600', letterSpacing:'0.05em' }}>Camera Capture</div>
+                    <div style={{ marginTop:'12px' }}>
+                      <button className="btn btn-primary" onClick={handleRealCameraCapture} style={{ marginRight:'8px' }}>
+                        {t('scanner.capturePhoto') || 'Capture Photo'}
+                      </button>
+                      <button className="btn btn-secondary" onClick={handleMockCapture}>
+                        {t('scanner.useMock') || 'Use Mock Data'}
+                      </button>
                     </div>
-                    <div className="camera-corners" style={{ position:'absolute', top:'8px', left:'8px', width:'20px', height:'20px', borderTop:'2px solid var(--primary)', borderLeft:'2px solid var(--primary)' }}></div>
-                    <div style={{ position:'absolute', top:'8px', right:'8px', width:'20px', height:'20px', borderTop:'2px solid var(--primary)', borderRight:'2px solid var(--primary)' }}></div>
-                    <div style={{ position:'absolute', bottom:'8px', left:'8px', width:'20px', height:'20px', borderBottom:'2px solid var(--primary)', borderLeft:'2px solid var(--primary)' }}></div>
-                    <div style={{ position:'absolute', bottom:'8px', right:'8px', width:'20px', height:'20px', borderBottom:'2px solid var(--primary)', borderRight:'2px solid var(--primary)' }}></div>
-                    <div className="scanning-line" style={{ position:'absolute', left:'0', width:'100%', height:'2px', background:'linear-gradient(90deg, transparent, var(--primary), transparent)', animation:'scan 3s ease-in-out infinite' }}></div>
+                    <input type="file" accept="image/*" capture="environment" ref={cameraInputRef} style={{ display:'none' }} onChange={handleCameraFileChange} />
                   </div>
-                </div>
-                <div className="camera-btn-container">
-                  <button className="btn btn-secondary" id="btn-camera-switch-mock" onClick={() => setMockIndex((mockIndex+1) % MOCK_LABELS.length)}>
-                    {t('scanner.cycleMocks')}
-                  </button>
-                  <button className="btn btn-primary" id="btn-camera-trigger" onClick={handleCameraCapture}>
-                    {t('scanner.captureAnalyze')}
-                  </button>
                 </div>
               </div>
             </div>
@@ -405,6 +465,12 @@ export default function Scanner() {
             <div style={{ position:'absolute', top:0, left:0, width:'100%', height:'100%', background:'var(--glass-bg)', borderRadius:'24px', zIndex:100, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'20px', backdropFilter:'blur(8px)' }}>
               <div className="loader-lens" style={{ width:'60px', height:'60px', marginBottom:0 }}></div>
               <h4 id="scan-progress-text">{loadingMsg}</h4>
+              {ocrProgress > 0 && (
+                <div style={{ width:'80%', marginTop:'8px' }}>
+                  <progress value={ocrProgress} max="100" className="ocr-progress-bar"></progress>
+                  <div style={{ textAlign:'center', marginTop:'4px', color:'var(--text-primary)' }}>{ocrProgress}%</div>
+                </div>
+              )}
             </div>
           )}
 
@@ -499,7 +565,6 @@ export default function Scanner() {
                   </a>
                 </div>
 
-                {/* ── Scan Another Product ── */}
                 <div style={{ marginTop: '16px', textAlign: 'center' }}>
                   <button
                     id="btn-scan-another"
@@ -507,12 +572,10 @@ export default function Scanner() {
                     onClick={handleReset}
                     style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                   >
-                    {/* Refresh / rotate icon */}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" width="18" height="18">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
                     </svg>
                 {t('scanner.scanAnother')}
-
                   </button>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-// Service Worker for HalalLens PWA
+// Service Worker for HalalHan PWA
 // Basic offline cache for static assets
 const CACHE_NAME = 'halallens-cache-v1';
 const ASSETS_TO_CACHE = [

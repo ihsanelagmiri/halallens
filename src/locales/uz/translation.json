@@ -1,7 +1,6 @@
 {
-  "brand": "HalalLens",
-  "tagline": "Yorliq ortini ko'ring",
-
+  "brand": "HalalHan",
+  "tagline": "Ishonchli halol qo'llanma.",
   "nav": {
     "home": "Bosh sahifa",
     "scanner": "Skaner",
@@ -16,20 +15,17 @@
     "logout": "Chiqish",
     "profile": "Profil"
   },
-
   "langSelector": {
     "label": "Til"
   },
-
   "loader": {
-    "tagline": "Yorliq ortini ko'ring"
+    "tagline": "Ishonchli halol qo'llanma."
   },
-
   "home": {
-    "logo": "HalalLens",
-    "heroTagline": "Yorliq ortini ko'ring",
+    "logo": "HalalHan",
+    "heroTagline": "Ishonchli halol qo'llanma.",
     "heroTitle": "Halol tanlovlarni bir zumda qiling",
-    "heroDesc": "Tarkibiy qismlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli halol oziq-ovqat tanlovlarini qiling. HalalLens aqlli AI tekshiruvchisi bilan istalgan oziq-ovqat mahsulotini skaner qiling yoki E-raqamlarni ko'rib chiqing.",
+    "heroDesc": "Tarkibiy qismlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli halol oziq-ovqat tanlovlarini qiling. HalalHan aqlli AI tekshiruvchisi bilan istalgan oziq-ovqat mahsulotini skaner qiling yoki E-raqamlarni ko'rib chiqing.",
     "launchScanner": "Skanerni ishga tushirish",
     "exploreENumbers": "E-raqamlarni o'rganish",
     "smartCamera": "Aqlli kamera",
@@ -41,9 +37,10 @@
     "feature2Title": "Ifloslanish auditori",
     "feature2Desc": "Ishlab chiqarish sharoitlari, umumiy mexanizm, hayvon fermentlari va qayta ishlash usullariga asoslanib o'zaro ifloslanish xavfini aniqlang.",
     "feature3Title": "E-raqamlar katalogi",
-    "feature3Desc": "Umumiy oziq-ovqat qo'shimchalari (E-raqamlar) ning keng qamrovli o'rnatilgan ma'lumotnomalari. Halol, Harom yoki Mashbuh (Shubhali) hukmlar bo'yicha filtrlang."
+    "feature3Desc": "Umumiy oziq-ovqat qo'shimchalari (E-raqamlar) ning keng qamrovli o'rnatilgan ma'lumotnomalari. Halol, Harom yoki Mashbuh (Shubhali) hukmlar bo'yicha filtrlang.",
+    "quranVerse": "Ey odamlar! Yer yuzidagi narsalardan halol-poklarini yenglar va shaytonning izidan ergashmanglar! Albatta, u sizlarga ochiq dushmandir",
+    "quranCitation": "Qur'on 2:168"
   },
-
   "scanner": {
     "title": "Tarkib skaneri",
     "subtitle": "Tafsilotlarni tahlil qilish uchun oziq-ovqat yorliqlarni skaner qiling yoki matnlarni joylashtiring.",
@@ -77,7 +74,6 @@
     "incorrectClassification": "Ushbu tasnif noto'g'ri deb o'ylaysizmi?",
     "reportBtn": "Xato haqida xabar berish"
   },
-
   "verdict": {
     "halal": "HALOL",
     "nonHalal": "HAROM",
@@ -85,7 +81,6 @@
     "compliant": "MUVOFIQ (HALOL)",
     "prohibited": "TAQIQLANGAN (HAROM)"
   },
-
   "directory": {
     "title": "E-raqamlar katalogi",
     "subtitle": "Halol holatlari, o'simlik va hayvon manbalarini tushunish uchun Yevropa oziq-ovqat qo'shimchalari kodlarini qidiring va ko'rib chiqing.",
@@ -96,7 +91,6 @@
     "filterUncertain": "Noaniq",
     "noResults": "Qidiruv mezonlariga mos qo'shimchalar topilmadi."
   },
-
   "contamination": {
     "title": "O'zaro ifloslanish auditori",
     "subtitle": "Potentsial harom o'zaro ifloslanish xavfi indeksini hisoblash uchun ishlab chiqarish sharoitlari, qadoqlash liniyalari, ajratib olish usullari va logistika o'zgaruvchilarini baholang.",
@@ -155,11 +149,10 @@
       "highTip3": "Ajratilgan qovurish kanallarini saqlaydigan halol muqobil oziq-ovqatlarni qidiring."
     }
   },
-
   "knowledge": {
     "title": "Ko'p so'raladigan savollar",
-    "q1": "HalalLens nima?",
-    "a1": "HalalLens - iste'molchilarga yorliq murakkabliklarini ko'rishga yordam beradigan premium, vizual yo'naltirilgan veb-ilova boshqaruv paneli. U tarkibiy qismlar ro'yxatlarini qayta ishlaydi, chalkash oziq-ovqat qo'shimchalari kodlarini (E-raqamlar) hal qiladi va ongli halol oziq-ovqat tanlovlarini qilishingiz uchun ifloslanish xavfini hisoblaydi.",
+    "q1": "HalalHan nima?",
+    "a1": "HalalHan - iste'molchilarga yorliq murakkabliklarini ko'rishga yordam beradigan premium, vizual yo'naltirilgan veb-ilova boshqaruv paneli. U tarkibiy qismlar ro'yxatlarini qayta ishlaydi, chalkash oziq-ovqat qo'shimchalari kodlarini (E-raqamlar) hal qiladi va ongli halol oziq-ovqat tanlovlarini qilishingiz uchun ifloslanish xavfini hisoblaydi.",
     "q2": "E-raqamlar bu yerda qanday tasniflangan?",
     "a2": "E-raqamlar Yevropa Ittifoqi tomonidan tartibga solinadigan qo'shimchalardir. Ular uchta asosiy guruhga bo'linadi: <br><strong>Halol:</strong> Hayvon yog'i yoki alkogol bo'lmagan o'simlik asosli, sintetik yoki kimyoviy birikmalar. <br><strong>Halol bo'lmagan (Harom):</strong> Cho'chqa go'shti, so'yilmagan hayvonlar yoki qo'ng'iz (E120) kabi hasharotlardan aniq olingan. <br><strong>Noaniq:</strong> Zavod logistikasiga qarab hayvon yog'idan (Harom) yoki o'simlik yog'idan (Halol) olinishi mumkin bo'lgan E471 kabi emulgatorlar.",
     "q3": "Mahsulot nima uchun \"Noaniq\" bo'ladi?",
@@ -169,13 +162,12 @@
     "sidebarTitle": "Halol qo'llanmasi asoslari",
     "sidebarDesc": "Islom ovqatlanish ko'rsatmalariga ko'ra faqat toza, sog'lom (Tayyib) va ruxsat etilgan (Halol) ovqat iste'mol qilish talab etiladi.",
     "sidebarLink": "Standartlar haqida ko'proq bilib oling",
-    "pwaTitle": "HalalLens-ni o'rnatish",
-    "pwaDesc": "Do'konda xarid qilayotganda oflayn rejimda oziq-ovqat tarkibini tezda tekshirish uchun HalalLens-ni mobil bosh ekranga qo'shing.",
+    "pwaTitle": "HalalHan-ni o'rnatish",
+    "pwaDesc": "Do'konda xarid qilayotganda oflayn rejimda oziq-ovqat tarkibini tezda tekshirish uchun HalalHan-ni mobil bosh ekranga qo'shing.",
     "pwaBtn": "Veb-ilovani o'rnatish"
   },
-
   "auth": {
-    "loginTitle": "HalalLens-ga kirish",
+    "loginTitle": "HalalHan-ga kirish",
     "registerTitle": "Hisob yaratish",
     "emailPlaceholder": "Elektron pochta manzili",
     "passwordPlaceholder": "Parol",
@@ -192,7 +184,6 @@
     "emailExists": "Elektron pochta allaqachon ro'yxatdan o'tgan.",
     "success": "Hisob muvaffaqiyatli yaratildi!"
   },
-
   "history": {
     "title": "Skaner tarixi",
     "searchPlaceholder": "Tarixda qidirish...",
@@ -218,7 +209,6 @@
       "summary": "Xulosa"
     }
   },
-
   "contact": {
     "title": "Biz bilan bog'lanish",
     "namePlaceholder": "Ismingiz",
@@ -227,10 +217,9 @@
     "submit": "Xabar yuborish",
     "thankYou": "Rahmat! Xabaringiz yuborildi."
   },
-
   "report": {
     "title": "Noto'g'ri tasnif haqida xabar berish",
-    "subtitle": "HalalLensni yaxshilashga yordam bering. Agar mahsulot noto'g'ri tasniflangan bo'lsa, bizga xabar bering.",
+    "subtitle": "HalalHanni yaxshilashga yordam bering. Agar mahsulot noto'g'ri tasniflangan bo'lsa, bizga xabar bering.",
     "productName": "Mahsulot nomi",
     "explanation": "Nima uchun bu noto'g'ri?",
     "suggestion": "Tavsiya etilgan tuzatish (ixtiyoriy)",
@@ -238,7 +227,6 @@
     "thankYou": "Rahmat! Hisobotingiz ko'rib chiqish uchun yuborildi.",
     "backToScanner": "Skanerga qaytish"
   },
-
   "dashboard": {
     "scanFood": "Skaner",
     "scanFoodDesc": "Tarkibni halol muvofiqligi bo'yicha tahlil qiling.",
@@ -253,7 +241,6 @@
     "contact": "Biz bilan bog'lanish",
     "contactDesc": "Qo'llab-quvvatlash uchun aloqaga chiqing."
   },
-
   "profile": {
     "title": "Profil va Sozlamalar",
     "accountInfo": "Hisob ma'lumotlari",
@@ -339,7 +326,6 @@
     },
     "versionStatus": "Eng oxirgi versiya"
   },
-
   "mosques": {
     "title": "Masjid topuvchi",
     "locating": "Yaqin atrofdagi masjidlarni topish uchun joylashuvingiz aniqlanmoqda...",
@@ -348,7 +334,6 @@
     "away": "uzoqlikda",
     "directions": "Yo'nalishni ochish"
   },
-
   "restaurants": {
     "title": "Halol restoranlar",
     "locating": "Yaqin atrofdagi restoranlarni topish uchun joylashuvingiz aniqlanmoqda...",
@@ -357,17 +342,15 @@
     "away": "uzoqlikda",
     "directions": "Yo'nalishni ochish"
   },
-
   "footer": {
-    "desc": "Yorliq ortini ko'ring. Tarkibiy qismlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli halol oziq-ovqat tanlovlarini qiling.",
+    "desc": "Ishonchli halol qo'llanma. Ingredientlarni tahlil qiling, ifloslanish xavfini aniqlang va ongli ravishda halol oziq-ovqat tanlovini amalga oshiring.",
     "navTitle": "Navigatsiya",
     "resourcesTitle": "Resurslar",
     "islamicGuide": "Islom oziq-ovqat kodeksi qo'llanmasi",
     "globalStandards": "Global Halol standartlari",
-    "rights": "© 2026 HalalLens. Barcha huquqlar himoyalangan.",
+    "rights": "© 2026 HalalHan. Barcha huquqlar himoyalangan.",
     "pwa": "Ish stoli va mobil qurilmalar uchun progressiv veb-ilova sifatida yaratilgan."
   },
-
   "privacy": {
     "title": "Maxfiylik siyosati",
     "dataStored": "Qanday ma'lumotlar saqlanadi",

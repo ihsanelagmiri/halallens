@@ -1,7 +1,6 @@
 {
-  "brand": "HalalLens",
-  "tagline": "Etiketin Ötesini Görün",
-
+  "brand": "HalalHan",
+  "tagline": "Güvenilir helal rehberiniz.",
   "nav": {
     "home": "Ana Sayfa",
     "scanner": "Tarayıcı",
@@ -16,20 +15,17 @@
     "logout": "Çıkış Yap",
     "profile": "Profil"
   },
-
   "langSelector": {
     "label": "Dil"
   },
-
   "loader": {
-    "tagline": "Etiketin Ötesini Görün"
+    "tagline": "Güvenilir helal rehberiniz."
   },
-
   "home": {
-    "logo": "HalalLens",
-    "heroTagline": "Etiketin Ötesini Görün",
+    "logo": "HalalHan",
+    "heroTagline": "Güvenilir helal rehberiniz.",
     "heroTitle": "Anında Bilinçli Helal Seçimler Yapın",
-    "heroDesc": "İçerikleri analiz edin, kirlilik risklerini tespit edin ve bilinçli helal gıda seçimleri yapın. HalalLens'in akıllı AI doğrulayıcısıyla herhangi bir gıda ürününü tarayın veya E-Numaralarını doğrudan inceleyin.",
+    "heroDesc": "İçerikleri analiz edin, kirlilik risklerini tespit edin ve bilinçli helal gıda seçimleri yapın. HalalHan'in akıllı AI doğrulayıcısıyla herhangi bir gıda ürününü tarayın veya E-Numaralarını doğrudan inceleyin.",
     "launchScanner": "Tarayıcıyı Başlat",
     "exploreENumbers": "E-Numaralarını Keşfet",
     "smartCamera": "Akıllı Kamera",
@@ -41,9 +37,10 @@
     "feature2Title": "Kirlilik Denetçisi",
     "feature2Desc": "Üretim koşullarına, paylaşılan makinelere, hayvansal enzimlere ve işleme yöntemlerine dayalı çapraz kirlilik risklerini belirleyin.",
     "feature3Title": "E-Numaraları Dizini",
-    "feature3Desc": "Yaygın gıda katkı maddelerinin (E-Numaraları) kapsamlı yerleşik referans dizini. Helal, Haram veya Meşkuk (Şüpheli) hükümlerine göre filtreleyin."
+    "feature3Desc": "Yaygın gıda katkı maddelerinin (E-Numaraları) kapsamlı yerleşik referans dizini. Helal, Haram veya Meşkuk (Şüpheli) hükümlerine göre filtreleyin.",
+    "quranVerse": "Ey insanlar! Yeryüzündeki şeylerin helâl ve temiz olanlarından yiyin! Şeytanın izinden yürümeyin. Çünkü o sizin için apaçık bir düşmandır.",
+    "quranCitation": "Kur'an-ı Kerim 2:168"
   },
-
   "scanner": {
     "title": "İçerik Tarayıcı",
     "subtitle": "Ayrıntıları analiz etmek için gıda etiketlerini tarayın veya metinleri yapıştırın.",
@@ -77,7 +74,6 @@
     "incorrectClassification": "Bu sınıflandırmanın yanlış olduğunu mu düşünüyorsunuz?",
     "reportBtn": "Hata Bildir"
   },
-
   "verdict": {
     "halal": "HELAL",
     "nonHalal": "HELAL DEĞİL",
@@ -85,7 +81,6 @@
     "compliant": "UYUMLU (HELAL)",
     "prohibited": "YASAK (HELAL DEĞİL)"
   },
-
   "directory": {
     "title": "E-Numaraları Dizini",
     "subtitle": "Helal durumlarını, bitki ve hayvan kökenlerini ve olası sağlık hükümlerini anlamak için Avrupa gıda katkı maddesi kodlarını arayın ve inceleyin.",
@@ -96,7 +91,6 @@
     "filterUncertain": "Belirsiz",
     "noResults": "Arama kriterlerine uyan katkı maddesi bulunamadı."
   },
-
   "contamination": {
     "title": "Çapraz Kirlilik Denetçisi",
     "subtitle": "Potansiyel helal olmayan çapraz kirlilik risk endeksini hesaplamak için üretim koşullarını, ambalaj hatlarını, ekstraksiyon yöntemlerini ve lojistik değişkenleri değerlendirin.",
@@ -155,11 +149,10 @@
       "highTip3": "İzole kızartma kanallarını koruyan helal alternatif gıdalar arayın."
     }
   },
-
   "knowledge": {
     "title": "Sıkça Sorulan Sorular",
-    "q1": "HalalLens nedir?",
-    "a1": "HalalLens, tüketicilerin etiket karmaşıklıklarının ötesini görmelerine yardımcı olmak için tasarlanmış premium, görsel odaklı bir web uygulaması panelidir. İçerik listelerini işler, kafa karıştırıcı gıda katkı maddesi kodlarını (E-numaraları) çözer ve bilinçli helal gıda seçimleri yapabilmeniz için anlık kirlilik risklerini hesaplar.",
+    "q1": "HalalHan nedir?",
+    "a1": "HalalHan, tüketicilerin etiket karmaşıklıklarının ötesini görmelerine yardımcı olmak için tasarlanmış premium, görsel odaklı bir web uygulaması panelidir. İçerik listelerini işler, kafa karıştırıcı gıda katkı maddesi kodlarını (E-numaraları) çözer ve bilinçli helal gıda seçimleri yapabilmeniz için anlık kirlilik risklerini hesaplar.",
     "q2": "E-Numaraları burada nasıl sınıflandırılıyor?",
     "a2": "E-Numaraları, Avrupa Birliği tarafından düzenlenen katkı maddeleridir. Üç ana gruba ayrılır: <br><strong>Helal:</strong> Hayvansal yağ veya alkol içermeyen bitkisel, sentetik veya kimyasal bileşikler. <br><strong>Helal Değil:</strong> Açıkça domuz etinden, kesimhaneden geçmemiş hayvanlardan veya koşnil (E120) gibi böceklerden elde edilen. <br><strong>Belirsiz:</strong> E471 gibi fabrikanın lojistiğine bağlı olarak hayvansal yağdan (Helal Değil) veya bitkisel yağdan (Helal) elde edilebilen emülgatörler veya yağ asitleri.",
     "q3": "Bir ürünü \"Belirsiz\" yapan nedir?",
@@ -169,13 +162,12 @@
     "sidebarTitle": "Helal Kılavuzu Temelleri",
     "sidebarDesc": "İslami beslenme yönergeleri, yalnızca saf, sağlıklı (Tayyib) ve izin verilen (Helal) gıdaların tüketilmesini emreder. Modern işlenmiş gıdaların içeriğini anlamak, helal yaşam tarzını sürdürmenin anahtarıdır.",
     "sidebarLink": "Standartlar hakkında daha fazla bilgi edinin",
-    "pwaTitle": "HalalLens'i Yükle",
-    "pwaDesc": "Alışveriş yaparken gıda içeriklerini hızla denetlemek ve çevrimdışı ambalaj taramak için HalalLens'i mobil ana ekranınıza ekleyin.",
+    "pwaTitle": "HalalHan'i Yükle",
+    "pwaDesc": "Alışveriş yaparken gıda içeriklerini hızla denetlemek ve çevrimdışı ambalaj taramak için HalalHan'i mobil ana ekranınıza ekleyin.",
     "pwaBtn": "Web Uygulamasını Yükle"
   },
-
   "auth": {
-    "loginTitle": "HalalLens'e Giriş",
+    "loginTitle": "HalalHan'e Giriş",
     "registerTitle": "Hesap Oluştur",
     "emailPlaceholder": "E-posta adresi",
     "passwordPlaceholder": "Şifre",
@@ -192,7 +184,6 @@
     "emailExists": "E-posta zaten kayıtlı.",
     "success": "Hesap başarıyla oluşturuldu!"
   },
-
   "history": {
     "title": "Tarama Geçmişi",
     "searchPlaceholder": "Taramalarda ara...",
@@ -218,7 +209,6 @@
       "summary": "Özet"
     }
   },
-
   "contact": {
     "title": "Bize Ulaşın",
     "namePlaceholder": "Adınız",
@@ -227,10 +217,9 @@
     "submit": "Mesaj Gönder",
     "thankYou": "Teşekkürler! Mesajınız gönderildi."
   },
-
   "report": {
     "title": "Yanlış Sınıflandırmayı Bildir",
-    "subtitle": "HalalLens'i geliştirmemize yardımcı olun. Bir ürünün yanlış sınıflandırıldığını düşünüyorsanız bize bildirin.",
+    "subtitle": "HalalHan'i geliştirmemize yardımcı olun. Bir ürünün yanlış sınıflandırıldığını düşünüyorsanız bize bildirin.",
     "productName": "Ürün Adı",
     "explanation": "Bu neden yanlış?",
     "suggestion": "Önerilen düzeltme (isteğe bağlı)",
@@ -238,7 +227,6 @@
     "thankYou": "Teşekkürler! Raporunuz incelenmek üzere gönderildi.",
     "backToScanner": "Tarayıcıya Dön"
   },
-
   "dashboard": {
     "scanFood": "Gıda Tara",
     "scanFoodDesc": "İçerikleri helal uyumluluğu için analiz et.",
@@ -253,7 +241,6 @@
     "contact": "Bize Ulaşın",
     "contactDesc": "Destek için bizimle iletişime geçin."
   },
-
   "profile": {
     "title": "Profil ve Ayarlar",
     "accountInfo": "Hesap Bilgileri",
@@ -339,7 +326,6 @@
     },
     "versionStatus": "Güncel"
   },
-
   "mosques": {
     "title": "Cami Bulucu",
     "locating": "Yakındaki camileri bulmak için konumunuz tespit ediliyor...",
@@ -348,7 +334,6 @@
     "away": "uzakta",
     "directions": "Yol Tarifi Al"
   },
-
   "restaurants": {
     "title": "Helal Restoranlar",
     "locating": "Yakındaki helal restoranları bulmak için konumunuz tespit ediliyor...",
@@ -357,17 +342,15 @@
     "away": "uzakta",
     "directions": "Yol Tarifi Al"
   },
-
   "footer": {
-    "desc": "Etiketin Ötesini Görün. İçerikleri analiz edin, kirlilik risklerini tespit edin ve bilinçli helal gıda seçimleri yapın.",
+    "desc": "Güvenilir helal rehberiniz. İçerikleri analiz edin, kontaminasyon risklerini tespit edin ve bilinçli helal gıda seçimleri yapın.",
     "navTitle": "Navigasyon",
     "resourcesTitle": "Kaynaklar",
     "islamicGuide": "İslami Gıda Kodu Rehberi",
     "globalStandards": "Küresel Helal Standartları",
-    "rights": "© 2026 HalalLens. Tüm hakları saklıdır.",
+    "rights": "© 2026 HalalHan. Tüm hakları saklıdır.",
     "pwa": "Masaüstü ve mobil cihazlar için Aşamalı Web Uygulaması olarak oluşturuldu."
   },
-
   "privacy": {
     "title": "Gizlilik Politikası",
     "dataStored": "Hangi veriler saklanıyor",
@@ -381,7 +364,6 @@
     "userRights": "Kullanıcı hakları",
     "userRightsContent": "Ayarlar sayfası aracılığıyla istediğiniz zaman veri silme, dışa aktarma veya değişiklik talebinde bulunabilirsiniz."
   },
-
   "archive": {
     "title": "Arşivde Ürün Bulundu",
     "desc": "Bu ürün daha önce analiz edilmiş.",

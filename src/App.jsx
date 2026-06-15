@@ -96,7 +96,7 @@ export default function App() {
       <div id="loading-screen" className={showLoader ? '' : 'fade-out'}>
         <div className="loader-container">
           <div className="loader-lens"></div>
-          <h1 className="loader-title">HalalLens</h1>
+          <h1 className="loader-title">HalalHan</h1>
           <span className="loader-tagline">{t('loader.tagline')}</span>
           <div className="loader-progress-bar"><div className="loader-progress"></div></div>
         </div>
@@ -107,8 +107,8 @@ export default function App() {
         <div className="navbar-container">
           <a href="#home" className="logo-link" id="nav-brand-logo">
             <div className="logo-icon"></div>
-            <span className="brand-name">HalalLens</span>
-            <div className="mobile-header-title">HalalLens</div>
+            <span className="brand-name">HalalHan</span>
+            <div className="mobile-header-title">HalalHan</div>
           </a>
 
 
@@ -140,7 +140,7 @@ export default function App() {
         <div className="content-wrapper" style={{ padding: '0 24px' }}>
           <div className="footer-grid">
             <div className="footer-brand">
-              <h3>HalalLens</h3>
+              <h3>HalalHan</h3>
               <p>{t('footer.desc')}</p>
             </div>
             <div className="footer-links">

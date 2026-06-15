@@ -72,16 +72,44 @@ export default function Home() {
     <div className="content-wrapper" style={{ padding: '60px 20px', maxWidth: '1000px', margin: '0 auto' }}>
       
       {/* Dashboard Hero */}
-      <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-      <h1 style={{ fontSize: '3rem', margin: '0 0 10px 0', color: 'var(--text-light)' }}>
-        {t('home.logo')}
-      </h1>
-      <h2 style={{ fontSize: '1.5rem', margin: '0 0 20px 0', color: 'var(--primary-color)' }}>
-        {t('home.heroTagline')}
-      </h2>
-      <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-        {t('home.heroDesc')}
-      </p>
+      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+        <h1 style={{ fontSize: '3rem', margin: '0 0 20px 0', color: 'var(--text-light)' }}>
+          {t('home.logo')}
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+          Analyze ingredients, verify halal compliance, discover nearby mosques, and find halal-friendly restaurants across Korea.
+        </p>
+      </div>
+
+      {/* Minimalist Quran Verse Section */}
+      <div style={{ 
+        margin: '60px auto', 
+        maxWidth: '600px',
+        padding: '30px 40px',
+        backgroundColor: 'var(--card-bg, rgba(255, 255, 255, 0.03))',
+        borderRadius: '16px',
+        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)',
+        textAlign: 'center'
+      }}>
+        <p style={{ 
+          fontSize: '1.25rem', 
+          fontWeight: '400',
+          margin: '0 0 15px 0', 
+          color: 'var(--text-light)',
+          lineHeight: '1.8'
+        }} dir="auto">
+          "{t('home.quranVerse')}"
+        </p>
+        <p style={{ 
+          fontSize: '0.95rem', 
+          margin: '0', 
+          color: 'var(--text-secondary)',
+          fontWeight: '400'
+        }} dir="auto">
+          — {t('home.quranCitation')}
+        </p>
       </div>
 
       {/* Dashboard Grid */}

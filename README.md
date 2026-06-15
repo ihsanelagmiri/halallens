@@ -1,6 +1,6 @@
-# HalalLens
+# HalalHan
 
-HalalLens is an AI-powered halal food scanner that helps users quickly check whether packaged food is halal, non-halal, or uncertain by analyzing ingredients using OCR and intelligent classification.
+HalalHan is an AI-powered halal food scanner that helps users quickly check whether packaged food is halal, non-halal, or uncertain by analyzing ingredients using OCR and intelligent classification.
 
 ## Features
 
@@ -13,7 +13,7 @@ HalalLens is an AI-powered halal food scanner that helps users quickly check whe
 
 ## Purpose
 
-HalalLens is designed for everyday use by anyone who wants to make informed food choices based on halal dietary guidelines. It helps users understand complex ingredient labels quickly and clearly.
+HalalHan is designed for everyday use by anyone who wants to make informed food choices based on halal dietary guidelines. It helps users understand complex ingredient labels quickly and clearly.
 
 ## Tech Stack
 
