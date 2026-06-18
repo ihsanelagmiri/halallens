@@ -53,33 +53,122 @@ const MOCK_LABELS = [
   { id: 'mashbooh-label', name: 'Savory Stew / 사골 스튜 (Uncertain)', ingredients: '소맥분, 정제수, 식물성유지, 젤라틴, 소고기 추출물, L-글루타민산나트륨, 유화제 E471' },
 ];
 
+const IGNORED_KEYWORDS = ['전화', '고객센터', '제조', '보관', '신고', '국번', '번호', '주소', 'www', 'http', '유통기한', '품목보고번호', '반품', '교환', '1399'];
+const INGREDIENT_WHITELIST = ['우유', '대두', '난류', '밀', '돼지고기', '유청', '단백', '분말', '복숭아', '토마토', '오징어', 'whey', 'protein', 'soy', 'milk', 'egg', 'pork'];
+const KOREAN_MAPPING = {
+  '대두': { eng: 'soy', status: 'halal' },
+  '우유': { eng: 'milk', status: 'halal' },
+  '유청단백분말': { eng: 'whey protein powder', status: 'uncertain' },
+  '돼지고기': { eng: 'pork', status: 'non-halal' },
+  '복숭아': { eng: 'peach', status: 'halal' },
+  '토마토': { eng: 'tomato', status: 'halal' },
+  '오징어': { eng: 'squid', status: 'halal' },
+  '난류': { eng: 'egg', status: 'halal' }
+};
+
+function scoreAndFilterLines(rawText) {
+  const lines = rawText.split(/[\n\r]+/);
+  let passedLines = [];
+
+  lines.forEach(line => {
+    let score = 0;
+    const lineLower = line.toLowerCase();
+    const noSpaceLine = lineLower.replace(/\s+/g, '');
+
+    if (IGNORED_KEYWORDS.some(kw => lineLower.includes(kw) || noSpaceLine.includes(kw))) {
+      score -= 2;
+    }
+    if (/\d{5,}/.test(noSpaceLine) || /\d{2,3}[-\s]?\d{3,4}[-\s]?\d{4}/.test(line)) {
+      score -= 2;
+    }
+
+    if (INGREDIENT_WHITELIST.some(kw => lineLower.includes(kw) || noSpaceLine.includes(kw))) {
+      score += 2;
+    }
+
+    if (line.includes(',') || line.includes('%')) {
+      score += 1;
+    }
+
+    if (score > 0) {
+      passedLines.push(line);
+    }
+  });
+
+  return passedLines.join('\n');
+}
+
 function analyzeIngredients(rawText) {
-  const cleanItems = rawText
+  const focusedText = scoreAndFilterLines(rawText);
+
+  const cleanItems = focusedText
     .split(/[,;()\[\]\n\r\t]+/)
     .map(item => item.replace(/\.$/, '').trim())
-    .filter(item => item.length > 1);
+    .filter(item => item.length > 1)
+    .filter(item => {
+      const itemNoSpaces = item.replace(/\s+/g, '');
+      // 1. Ignore lines that are mostly numbers or symbols
+      const alphaKoreanChars = item.replace(/[^a-zA-Z가-힣]/g, '');
+      if (alphaKoreanChars.length < 2) return false;
+      
+      // 2. Ignore non-ingredient metadata (checking both original and spaceless)
+      if (IGNORED_KEYWORDS.some(kw => item.includes(kw) || itemNoSpaces.includes(kw))) return false;
+
+      // 3. Ignore phone numbers and long numeric strings
+      if (/\d{5,}/.test(itemNoSpaces)) return false; // 5 or more digits in a row
+      if (/\d{2,3}[-\s]?\d{3,4}[-\s]?\d{4}/.test(item)) return false; // phone number pattern
+      
+      return true;
+    });
 
   let countHalal = 0, countNonHalal = 0, countUncertain = 0;
   let itemsReport = [], recommendations = [];
 
   cleanItems.forEach(item => {
-    const itemLower = item.toLowerCase().trim();
-    const itemLowerNoSpace = itemLower.replace(/\s+/g, '');
+    let itemLower = item.toLowerCase().trim();
+    // Normalized text: remove spaces between Korean chars, remove punctuation
+    let itemNormalized = itemLower.replace(/\s+/g, '').replace(/[^\w가-힣]/g, '');
+    
+    let status = 'uncertain';
+    let origin = null;
+    let desc = null;
+    let alt = null;
     let matched = null;
 
-    for (const entry of MULTILINGUAL_DATABASE) {
-      if (entry.aliases.some(a => a.toLowerCase().replace(/\s+/g,'') === itemLowerNoSpace)) { matched = entry; break; }
-    }
-    if (!matched) {
-      for (const entry of MULTILINGUAL_DATABASE) {
-        if (entry.aliases.some(a => { const al = a.toLowerCase().trim(); return al.length > 2 && itemLower.includes(al); })) { matched = entry; break; }
+    // 3. Korean normalization & direct keyword overrides
+    let mappedToEnglish = null;
+    for (const [ko, data] of Object.entries(KOREAN_MAPPING)) {
+      if (itemLower.includes(ko) || itemNormalized.includes(ko)) {
+        mappedToEnglish = data.eng;
+        status = data.status;
+        if (status === 'halal') desc = 'Natural plant/animal product (Halal)';
+        if (status === 'non-halal') desc = 'Explicitly prohibited (Pork)';
+        if (status === 'uncertain') desc = 'Requires further verification';
+        break;
       }
     }
 
-    const status = matched ? matched.status : 'uncertain';
-    const origin = matched ? matched.source : null;
-    const desc = matched ? matched.reason : null;
-    const alt = matched ? matched.alt : null;
+    if (mappedToEnglish) {
+      item = mappedToEnglish;
+    } else {
+      // 4. Normal multilingual DB search
+      const itemLowerNoSpace = itemLower.replace(/\s+/g, '');
+      for (const entry of MULTILINGUAL_DATABASE) {
+        if (entry.aliases.some(a => a.toLowerCase().replace(/\s+/g,'') === itemLowerNoSpace)) { matched = entry; break; }
+      }
+      if (!matched) {
+        for (const entry of MULTILINGUAL_DATABASE) {
+          if (entry.aliases.some(a => { const al = a.toLowerCase().trim(); return al.length > 2 && itemLower.includes(al); })) { matched = entry; break; }
+        }
+      }
+
+      if (matched) {
+        status = matched.status;
+        origin = matched.source;
+        desc = matched.reason;
+        alt = matched.alt;
+      }
+    }
 
     if (status === 'halal') countHalal++;
     if (status === 'non-halal') countNonHalal++;

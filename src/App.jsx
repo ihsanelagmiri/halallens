@@ -44,6 +44,19 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
+  // Optional: Firebase Sync Placeholder
+  useEffect(() => {
+    if (currentUser) {
+      // TODO: Sync i18n.language to Firebase user profile here
+      // e.g., updateProfile(auth.currentUser, { photoURL: i18n.language }) or write to Firestore
+      console.log(`[Firebase Sync Placeholder] User ${currentUser.email} preferred language set to ${i18n.language}`);
+    }
+  }, [i18n.language, currentUser]);
+
   // Theme initialization
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -111,6 +124,20 @@ export default function App() {
             <div className="mobile-header-title">HalalHan</div>
           </a>
 
+          <div style={{ marginLeft: 'auto', marginRight: '10px', display: 'flex', alignItems: 'center' }}>
+            <select
+              className="lang-selector"
+              value={i18n.language}
+              onChange={handleLanguageChange}
+              style={{ padding: '6px 10px', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-primary)', outline: 'none', cursor: 'pointer', fontSize: '0.9rem', fontWeight: '500' }}
+            >
+              <option value="en">English</option>
+              <option value="ko">한국어</option>
+              <option value="ar">العربية</option>
+              <option value="uz">O'zbek</option>
+              <option value="tr">Türkçe</option>
+            </select>
+          </div>
 
           {/* Hamburger */}
           <button className="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
