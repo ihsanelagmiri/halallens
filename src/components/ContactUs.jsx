@@ -17,34 +17,17 @@ export default function ContactUs() {
     e.preventDefault();
     setErrorMsg('');
     if (form.name && form.email && form.message) {
-      // --- TEMPORARY DEBUG LOGGING (remove after testing) ---
-      const sid = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-      const tid = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-      const pk  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
-      const mask = (s) => s.length <= 6 ? '***' : s.slice(0, 3) + '***' + s.slice(-3);
-      console.log('[ContactUs DEBUG] Service ID:', sid ? mask(sid) : 'UNDEFINED');
-      console.log('[ContactUs DEBUG] Template ID:', tid ? mask(tid) : 'UNDEFINED');
-      console.log('[ContactUs DEBUG] Public Key:', pk ? mask(pk) : 'UNDEFINED');
-      console.log('[ContactUs DEBUG] Template params:', { from_name: form.name, reply_to: form.email, message: form.message });
-      // --- END DEBUG ---
       try {
-        const response = await emailjs.send(
-          sid,
-          tid,
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           { from_name: form.name, reply_to: form.email, message: form.message },
-          pk
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         );
-        // --- TEMPORARY: log full response ---
-        console.log('[ContactUs DEBUG] EmailJS response status:', response.status);
-        console.log('[ContactUs DEBUG] EmailJS response text:', response.text);
-        console.log('[ContactUs DEBUG] Full response object:', response);
-        // --- END TEMPORARY ---
         setSubmitted(true);
         setForm({ name: '', email: '', message: '' });
       } catch (err) {
-        console.error('[ContactUs DEBUG] EmailJS error object:', err);
-        console.error('[ContactUs DEBUG] EmailJS error status:', err?.status);
-        console.error('[ContactUs DEBUG] EmailJS error text:', err?.text);
+        console.error('EmailJS error:', err);
         setErrorMsg(t('contact.error') || 'Failed to send message. Please try again later.');
       }
     }

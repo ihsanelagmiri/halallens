@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useTranslation } from 'react-i18next';
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function Login() {
   const { t } = useTranslation();
@@ -9,13 +11,14 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = login(email.trim(), password);
-    if (!result.success) {
-      setError(t('auth.error'));
-    } else {
+    try {
+      await signInWithEmailAndPassword(auth, email.trim(), password);
       window.location.hash = '#home';
+    } catch (err) {
+      console.error(err);
+      setError(t('auth.error'));
     }
   };
 

@@ -1,4 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
+import { auth } from '../firebase';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 // Keys used in localStorage
 const USER_KEY = 'halal_user';
@@ -16,14 +18,20 @@ export const AuthContext = createContext({
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
-  // Load persisted user on mount
+  // Listen to Firebase Auth state on mount
   useEffect(() => {
-    const stored = localStorage.getItem(USER_KEY);
-    if (stored) {
-      try {
-        setCurrentUser(JSON.parse(stored));
-      } catch (_) {}
-    }
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // map Firebase user to our currentUser format
+        const userData = { email: user.email, name: user.displayName || user.email.split('@')[0], uid: user.uid };
+        setCurrentUser(userData);
+        persistUser(userData);
+      } else {
+        setCurrentUser(null);
+        persistUser(null);
+      }
+    });
+    return () => unsubscribe();
   }, []);
 
   const persistUser = (user) => {
@@ -103,7 +111,12 @@ export const AuthProvider = ({ children }) => {
     persistUser(updatedUser);
   };
 
-  const logout = () => {
+  const logout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
     setCurrentUser(null);
     persistUser(null);
   };

@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useTranslation } from 'react-i18next';
+import { auth } from '../firebase';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
 export default function Register() {
   const { t } = useTranslation();
@@ -11,17 +13,26 @@ export default function Register() {
   const [confirm, setConfirm] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirm) {
       setError(t('auth.passwordMismatch'));
       return;
     }
-    const result = register(name.trim(), email.trim(), password);
-    if (!result.success) {
-      setError(t('auth.emailExists'));
-    } else {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email.trim(), password);
+      // Update the user's profile with their name
+      if (auth.currentUser) {
+        await updateProfile(auth.currentUser, { displayName: name.trim() });
+      }
       window.location.hash = '#home';
+    } catch (err) {
+      console.error(err);
+      if (err.code === 'auth/email-already-in-use') {
+        setError(t('auth.emailExists'));
+      } else {
+        setError(err.message || 'Registration failed');
+      }
     }
   };
 
